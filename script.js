@@ -2,6 +2,86 @@
 // https://uk.javascript.info/
 
 // My-Code -----------
+// const message = "Хотите продлить подписку?";
+
+// const shouldRenew = confirm("Хотите продлить подписку?");
+// console.log(shouldRenew);
+
+let elementWith = "50.25px";
+// const result = Number.parseInt(elementWith);
+
+// console.log(result);
+
+let elementHeigth = "200.74px";
+// ------------------
+
+let salary = 1300.16659656845;
+
+// salary = Number(salary.toFixed(2));
+// console.log(salary);
+
+let quantity = "30";
+let value = "Эту строку невозможно привести к числу";
+
+// console.log(Number(quantity));
+// console.log(Number(value));
+
+// const base = 3;
+// const power = 5;
+
+// const result = Math.pow(base, power);
+// console.log(base ** power);
+
+// Math.sqrt();
+
+// 1. попросить ввести число и сохранить в переменную
+
+// let base = prompt("Давай число");
+// base = Number(base);
+
+// console.log(base);
+// 2. попросить ввести степень и сохранить в переменную
+
+// let power = prompt("Давай степень");
+
+// power = Number(power);
+// console.log(power);
+
+// 3 Возвести введенные данные в степень и вывес
+
+// const result = base ** power;
+
+// const max = 80;
+// const min = 10;
+
+// const result = Math.round(Math.random() * (max - min) + min);
+
+// console.log(result);
+
+// const colors = ["tomato", "teal", "orange", "deeppink", "skyblue"];
+// const max = colors.length - 1;
+// const min = 0;
+
+// const index = Math.round(Math.random() * (max - min) + min);
+
+// const color = colors[index];
+
+// console.log(color);
+
+// document.body.style.backgroundColor = color;
+
+// Math.random() * (max - min) + min
+
+// console.log(result2);
+// console.log(salary);
+// elementHeigth = Number.parseFloat(elementHeigth);
+
+// console.log("elementHeigth:", elementHeigth);
+
+// let quantity = prompt("Введите количество товара");
+// quantity = Number(quantity);
+// console.log(quantity);
+// console.log(typeof quantity);
 // console.log("Hello world");
 
 // let a = 10;
