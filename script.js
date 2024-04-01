@@ -96,4 +96,9 @@ let brand = "samSUnG";
 // Операторы сравнения ----------------//
 
 const isEqual = false == 0;
-console.log(isEqual);
+// console.log(isEqual);
+
+/* Sweatch-----*/
+
+const stars = 1;
+let price;
