@@ -181,3 +181,34 @@ const isEqual = false == 0;
 // сделать switch 123
 
 // 3.в каждом кейсе запись
+
+// Цикли-----------------------
+
+// for (let i = 10; i >= 0; i -= 1) {
+//   console.log(i);
+// }
+
+// console.log("qweeqwee");
+
+// 1.{0-100(1)}
+// for (let i = 0; i <= 100; i += 1) {
+//   console.log(i);
+// }
+
+// 2.{50-100(5)}
+
+// for (let i = 50; i <= 100; i += 5) {
+//   console.log(i);
+// }
+
+// 3.{100-0(1)}
+
+// for (let i = 100; i >= 0; i -= 1) {
+//   console.log(i);
+// }
+
+// 4.{50-0(5)}
+
+// for (let i = 50; i >= 0; i -= 5) {
+//   console.log(i);
+// }
