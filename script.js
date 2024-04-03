@@ -212,3 +212,18 @@ const isEqual = false == 0;
 // for (let i = 50; i >= 0; i -= 5) {
 //   console.log(i);
 // }
+
+//  1 сделать вары
+const minSalary = 500;
+const maxSalary = 5000;
+const employees = 4;
+let totalSalary = 0;
+
+//  2 перебрать работников в цикле
+
+for (let i = 1; i < 5; i += 1) {
+  console.log(`ЗП  работника номер${i} -`);
+}
+// 3 сгенерить случайную запись
+// 4 прибавить к тоталу
+// 5
