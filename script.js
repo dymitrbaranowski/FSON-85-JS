@@ -216,12 +216,12 @@ const isEqual = false == 0;
 //  1 сделать вары
 const minSalary = 500;
 const maxSalary = 5000;
-const employees = 4;
+const employees = 9;
 let totalSalary = 0;
 
 //  2 перебрать работников в цикле
 
-for (let i = 1; i < 5; i += 1) {
+for (let i = 1; i <= employees; i += 1) {
   console.log(`ЗП  работника номер${i} -`);
 }
 // 3 сгенерить случайную запись
