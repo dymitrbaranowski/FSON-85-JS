@@ -221,9 +221,43 @@ let totalSalary = 0;
 
 //  2 перебрать работников в цикле
 
-for (let i = 1; i <= employees; i += 1) {
-  console.log(`ЗП  работника номер${i} -`);
-}
+// for (let i = 1; i <= employees; i += 1) {
+//   const salary = Math.round(
+//     Math.random() * (maxSalary - minSalary) + minSalary
+//   );
+//   console.log(`ЗП  работника номер${i} - ${salary}`);
+
+//   totalSalary += salary;
+// }
+
 // 3 сгенерить случайную запись
 // 4 прибавить к тоталу
+// console.log("totalSalary: ", totalSalary);
 // 5
+
+const min = 0;
+
+const max = 5;
+
+let total = 0;
+
+// фор от min до max сшагом в 1
+
+for (let i = min; i <= max; i += 1) {
+  // console.log(i);
+
+  if (i % 2 !== 0) {
+    console.log("не четное", i);
+    continue;
+  }
+  console.log("четное:", i);
+
+  total += i;
+}
+
+console.log("total:", total);
+// console.log(14 % 2);
+
+// проверяем остаток от деления
+
+// пишем в суму
