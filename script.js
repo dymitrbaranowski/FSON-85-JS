@@ -243,21 +243,37 @@ let total = 0;
 
 // фор от min до max сшагом в 1
 
-for (let i = min; i <= max; i += 1) {
-  // console.log(i);
+// for (let i = min; i <= max; i += 1) {
+//   // console.log(i);
 
-  if (i % 2 !== 0) {
-    console.log("не четное", i);
-    continue;
-  }
-  console.log("четное:", i);
+//   if (i % 2 !== 0) {
+//     console.log("не четное", i);
+//     continue;
+//   }
+//   console.log("четное:", i);
 
-  total += i;
-}
+//   total += i;
+// }
 
-console.log("total:", total);
+// console.log("total:", total);
 // console.log(14 % 2);
 
 // проверяем остаток от деления
 
 // пишем в суму
+
+// 1 вары
+//
+let balance = 10000;
+const payment = 2000;
+
+console.log(
+  `Oбщая стоимость заказа ${2000} кредитов. Проверяем кол-во доступных средств на счету`
+);
+
+if (balance >= payment) {
+  console.log("ok");
+}
+
+// 2 условие сумма Б= баланс
+// "Все хорошо, снимаем деньги... Спасибо за покупку!"
