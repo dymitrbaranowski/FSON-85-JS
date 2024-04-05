@@ -264,23 +264,27 @@ let total = 0;
 
 // 1 вары
 //
-let balance = 1000;
-const payment = 2000;
+// let balance = 1000;
+// const payment = 2000;
 
-console.log(
-  `Oбщая стоимость заказа ${2000} кредитов. Проверяем кол-во доступных средств на счету`
-);
+// console.log(
+//   `Oбщая стоимость заказа ${2000} кредитов. Проверяем кол-во доступных средств на счету`
+// );
 
-if (balance >= payment) {
-  console.log("ok");
-  balance -= payment;
+// if (balance >= payment) {
+//   console.log("ok");
+//   balance -= payment;
 
-  console.log(`Насчету осталось ${balance} кредитов`);
-} else {
-  console.log("На счету недостаточно средств для проведения операции!");
-}
+//   console.log(`Насчету осталось ${balance} кредитов`);
+// } else {
+//   console.log("На счету недостаточно средств для проведения операции!");
+// }
 
-console.log("Операция завершена");
+// console.log("Операция завершена");
 
 // 2 условие сумма Б= баланс
 // "Все хорошо, снимаем деньги... Спасибо за покупку!"
+
+const totalSpent = 2000;
+let payment = 500;
+let discount = 0;
