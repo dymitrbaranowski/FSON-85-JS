@@ -264,7 +264,7 @@ let total = 0;
 
 // 1 вары
 //
-let balance = 10000;
+let balance = 1000;
 const payment = 2000;
 
 console.log(
@@ -273,7 +273,14 @@ console.log(
 
 if (balance >= payment) {
   console.log("ok");
+  balance -= payment;
+
+  console.log(`Насчету осталось ${balance} кредитов`);
+} else {
+  console.log("На счету недостаточно средств для проведения операции!");
 }
+
+console.log("Операция завершена");
 
 // 2 условие сумма Б= баланс
 // "Все хорошо, снимаем деньги... Спасибо за покупку!"
