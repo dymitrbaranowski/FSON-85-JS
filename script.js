@@ -214,10 +214,10 @@ const isEqual = false == 0;
 // }
 
 //  1 сделать вары
-const minSalary = 500;
-const maxSalary = 5000;
-const employees = 9;
-let totalSalary = 0;
+// const minSalary = 500;
+// const maxSalary = 5000;
+// const employees = 9;
+// let totalSalary = 0;
 
 //  2 перебрать работников в цикле
 
@@ -235,11 +235,11 @@ let totalSalary = 0;
 // console.log("totalSalary: ", totalSalary);
 // 5
 
-const min = 0;
+// const min = 0;
 
-const max = 5;
+// const max = 5;
 
-let total = 0;
+// let total = 0;
 
 // фор от min до max сшагом в 1
 
@@ -310,8 +310,27 @@ let total = 0;
 
 // console.log(`Общая сумма потраченого в магазине: ${totalSpent}`);
 
-const btnAdd = document.querySelector("button");
+const btnAdd = document.querySelector("button[data-add]");
+const resetBtn = document.querySelector("button[data-reset");
+const valueInput = document.querySelector("input[data-value]");
+const outputEl = document.querySelector(".js-output span");
+
+let total = 0;
 
 btnAdd.addEventListener("click", function () {
   console.log("click hehehehe");
+
+  const value = Number(valueInput.value);
+
+  console.log(value);
+
+  total += value;
+  outputEl.textContent = total;
+
+  valueInput.value = "";
+});
+
+resetBtn.addEventListener("click", function () {
+  total = 0;
+  outputEl.textContent = total;
 });
