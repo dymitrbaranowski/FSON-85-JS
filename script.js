@@ -285,6 +285,23 @@ let total = 0;
 // 2 условие сумма Б= баланс
 // "Все хорошо, снимаем деньги... Спасибо за покупку!"
 
-const totalSpent = 2000;
+let totalSpent = 5000;
 let payment = 500;
 let discount = 0;
+
+if (totalSpent >= 100 && totalSpent < 1000) {
+  console.log("Бронзовый партнер, скидка 2%");
+  discount = 0.02;
+} else if (totalSpent >= 1000 && totalSpent < 5000) {
+  console.log("Серебряный партнер , скидка 5%");
+  discount = 0.05;
+} else if (totalSpent >= 5000) {
+  console.log("Золотой партнер, скидка 10%");
+  discount = 0.1;
+} else {
+  console.log("Не партнер, скидка 0%");
+}
+
+payment = payment - payment * discount;
+
+console.log(`Оформляем заказ на суму ${payment} со скидкой ${discount * 100}%`);
