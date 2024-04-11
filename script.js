@@ -50,21 +50,61 @@
 
 // console.log(cart);
 
-const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
+const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
 
 let total = 0;
 
 // 1 переменнная total
 // 2 перебрать масив
-for (let i = 0; i < numbers.length; i += 1) {
-  console.log(numbers[i]);
-  // 3 на каждой итерации проверить елемент на четность
+// for (let i = 0; i < numbers.length; i += 1) {
+//   const number = numbers[i];
+//   console.log(number);
+//   // 3 на каждой итерации проверить елемент на четность
 
-  if (numbers[i] % 2 === 0) {
-    console.log("Четное!!!");
-    // 4 если четный, плюсуем к тотал
-    total += numbers[i];
+//   if (number % 2 === 0) {
+//     console.log("Четное!!!");
+//     // 4 если четный, плюсуем к тотал
+//     total += number;
+//   }
+// }
+
+// for (const number of numbers) {
+//   console.log(number);
+
+//   if (number % 2 === 0) {
+//     console.log(`${number} - Четное!!!`);
+
+//     total += number;
+//   }
+// }
+
+// for (const number of numbers) {
+//   if (number % 2 !== 0) {
+//     console.log("Эту итерацию нужно пропустить", number);
+//     continue;
+//   }
+
+//   console.log(`${number} - Четное!!!`);
+
+//   total += number;
+// }
+
+// console.log("Total:", total);
+
+const logins = ["fwefweufehi", "weuW83473748", "poly1scute", "wDkdowdw2034"];
+const loginToFind = "poly1scute";
+
+let message = "";
+
+for (let i = 0; i < logins.length; i += 1) {
+  const login = logins[i];
+
+  if (login === loginToFind) {
+    message = `Пользователь ${loginToFind} найден`;
+    break;
   }
+
+  message = `Пользователь ${loginToFind} не найден`;
 }
 
-console.log("Total:", total);
+console.log(message);
