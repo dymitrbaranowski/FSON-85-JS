@@ -50,9 +50,9 @@
 
 // console.log(cart);
 
-const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
 
-let total = 0;
+// let total = 0;
 
 // 1 переменнная total
 // 2 перебрать масив
@@ -91,8 +91,8 @@ let total = 0;
 
 // console.log("Total:", total);
 
-const logins = ["fwefweufehi", "weuW83473748", "poly1scute", "wDkdowdw2034"];
-const loginToFind = "poly1scute";
+// const logins = ["fwefweufehi", "weuW83473748", "poly1scute", "wDkdowdw2034"];
+// const loginToFind = "poly1scute";
 
 // let message = ` Пользователь ${loginToFind} не найден.`;
 
@@ -122,7 +122,41 @@ const loginToFind = "poly1scute";
 
 // console.log(message);
 
-const a = 5 > 10 ? "ага" : "нет";
+// const a = 5 > 10 ? "ага" : "нет";
 
-const message = logins.includes(loginToFind) ? "ага" : "нет";
-console.log(message);
+// const message = logins.includes(loginToFind)
+//   ? `Пользователь ${loginToFind} найден.`
+//   : `Пользователь ${loginToFind} не найден.`;
+// console.log(message);
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number < smallestNumber) {
+//     smallestNumber = number;
+//   }
+// }
+
+// console.log("smallestNumber:", smallestNumber);
+
+// let bigestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number > bigestNumber) {
+//     bigestNumber = number;
+//   }
+// }
+
+// console.log("bigestNumber:", bigestNumber);
+
+const friends = ["Mango", "POly", "Kiwi", "Ajax"];
+
+let string = "";
+
+for (const friend of friends) {
+  string += friend + ",";
+}
+
+console.log(string.slice(string.length - 1));
