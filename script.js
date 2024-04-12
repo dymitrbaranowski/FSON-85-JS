@@ -94,17 +94,35 @@ let total = 0;
 const logins = ["fwefweufehi", "weuW83473748", "poly1scute", "wDkdowdw2034"];
 const loginToFind = "poly1scute";
 
-let message = "";
+// let message = ` Пользователь ${loginToFind} не найден.`;
 
-for (let i = 0; i < logins.length; i += 1) {
-  const login = logins[i];
+// for (let i = 0; i < logins.length; i += 1) {
+//   const login = logins[i];
 
-  if (login === loginToFind) {
-    message = `Пользователь ${loginToFind} найден`;
-    break;
-  }
+//   console.log("Login:", login);
+//   console.log(`${login} === ${loginToFind}:`, login === loginToFind);
 
-  message = `Пользователь ${loginToFind} не найден`;
-}
+//   if (login === loginToFind) {
+//     console.log("Ура, равны!!!");
+//     message = `Пользователь ${loginToFind} найден`;
+//     break;
+//   }
+// }
 
+// for (const login of logins) {
+//   console.log("Login:", login);
+//   console.log(`${login} === ${loginToFind}:`, login === loginToFind);
+
+//   if (login === loginToFind) {
+//     console.log("Ура, равны!!!");
+//     message = `Пользователь ${loginToFind} найден`;
+//     break;
+//   }
+// }
+
+// console.log(message);
+
+const a = 5 > 10 ? "ага" : "нет";
+
+const message = logins.includes(loginToFind) ? "ага" : "нет";
 console.log(message);
