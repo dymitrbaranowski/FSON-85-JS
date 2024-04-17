@@ -165,26 +165,41 @@
 // const string = friends.join(",");
 // console.log(string);
 
-const string = "YJguwWdURYDFHllcd";
-const letters = string.split("");
-let invertedString = "";
+// const string = "YJguwWdURYDFHllcd";
+// const letters = string.split("");
+// let invertedString = "";
 
-console.log(letters);
+// console.log(letters);
 
-for (const letter of letters) {
-  console.log(letter);
+// for (const letter of letters) {
+//   console.log(letter);
 
-  // if (letter === letter.toLowerCase()) {
-  //   console.log("Эта буква в нижнем регистре!!! - ", letter);
+// if (letter === letter.toLowerCase()) {
+//   console.log("Эта буква в нижнем регистре!!! - ", letter);
 
-  //   invertedString += letter.toUpperCase();
-  // } else {
-  //   console.log("Эта буква в верхнем регистре!!! - ", letter);
-  //   invertedString += letter.toLowerCase();
-  // }
+//   invertedString += letter.toUpperCase();
+// } else {
+//   console.log("Эта буква в верхнем регистре!!! - ", letter);
+//   invertedString += letter.toLowerCase();
+// }
 
-  const isEqual = letter === letter.toLowerCase();
-  invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
-}
+//   const isEqual = letter === letter.toLowerCase();
+//   invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
+// }
 
-console.log("invertedString: ", invertedString);
+// console.log("invertedString: ", invertedString);
+
+// Должно получиться top-10-benefits-of-react-framework
+const title = "Top 10 benefits of React framework";
+
+const normalizedTitle = title.toLocaleLowerCase();
+// console.log(normalizedTitle);
+
+const words = normalizedTitle.split(" ");
+// console.log(words);
+
+const slug = words.join("-");
+// console.log(slug);
+
+const slug1 = title.toLocaleLowerCase().split(" ").join("-");
+console.log(slug1);
