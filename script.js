@@ -190,16 +190,26 @@
 // console.log("invertedString: ", invertedString);
 
 // Должно получиться top-10-benefits-of-react-framework
-const title = "Top 10 benefits of React framework";
+// const title = "Top 10 benefits of React framework";
 
-const normalizedTitle = title.toLocaleLowerCase();
+// const normalizedTitle = title.toLocaleLowerCase();
 // console.log(normalizedTitle);
 
-const words = normalizedTitle.split(" ");
+// const words = normalizedTitle.split(" ");
 // console.log(words);
 
-const slug = words.join("-");
+// const slug = words.join("-");
 // console.log(slug);
 
-const slug1 = title.toLocaleLowerCase().split(" ").join("-");
-console.log(slug1);
+// const slug1 = title.toLocaleLowerCase().split(" ").join("-");
+// console.log(slug1);
+const array1 = [5, 10, 15, 20];
+const array2 = [10, 20, 30];
+
+let total = 0;
+
+const numbers = array1.concat(array2);
+console.log(numbers);
+
+console.log(array1);
+console.log(array2);
