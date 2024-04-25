@@ -165,14 +165,14 @@
 // const string = friends.join(",");
 // console.log(string);
 
-const string = "YJguwWdURYDFHllcd";
-const letters = string.split("");
-let invertedString = "";
+// const string = "YJguwWdURYDFHllcd";
+// const letters = string.split("");
+// let invertedString = "";
 
-console.log(letters);
+// console.log(letters);
 
-for (const letter of letters) {
-  console.log(letter);
+// for (const letter of letters) {
+//   console.log(letter);
 
   // if (letter === letter.toLowerCase()) {
   //   console.log("Эта буква в нижнем регистре!!! - ", letter);
@@ -183,8 +183,14 @@ for (const letter of letters) {
   //   invertedString += letter.toLowerCase();
   // }
 
-  const isEqual = letter === letter.toLowerCase();
-  invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
-}
+//   const isEqual = letter === letter.toLowerCase();
+//   invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
+// }
 
-console.log("invertedString: ", invertedString);
+// console.log("invertedString: ", invertedString);
+
+
+const cards = ['Карточка-1',"Карточка-2","Карточка-3" ,"Карточка-4","Карточка-5",];
+
+const
+
