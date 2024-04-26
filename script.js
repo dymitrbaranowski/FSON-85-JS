@@ -190,7 +190,27 @@
 // console.log("invertedString: ", invertedString);
 
 
-const cards = ['Карточка-1',"Карточка-2","Карточка-3" ,"Карточка-4","Карточка-5",];
+const cards = [
+  'Карточка-1',
+"Карточка-2",
+"Карточка-3" ,
+"Карточка-4",
+"Карточка-5",
+];
 
-const
+console.table(cards)
+
+const cardToRemove = "Карточка-3";
+const index = cards.indexOf(cardToRemove);
+
+console.log(index);
+console.log(cards.splice(index, 3));;
+console.table(cards)
+
+
+const cardToInsert = 'Карточка-6';
+// const index = 3;
+
+
+
 
