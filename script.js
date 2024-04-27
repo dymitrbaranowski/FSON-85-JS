@@ -203,16 +203,71 @@
 
 // const slug1 = title.toLocaleLowerCase().split(" ").join("-");
 // console.log(slug1);
-const array1 = [5, 10, 15, 20];
-const array2 = [10, 20, 30];
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
 
-let total = 0;
+// let total = 0;
 
-const numbers = array1.concat(array2);
+// const numbers = array1.concat(array2);
 
-for (const number of numbers){
-  total += number
+// for (const number of numbers){
+//   total += number
+// }
+
+// console.log(total);
+
+
+// const clients = ["Mango", "Ajax", "Poly", "Kiws"];
+// console.log(clients.slice(1,3));
+
+// console.log(clients.slice(1));
+// console.log(clients.slice(-1));
+
+
+// splice ------------------------------
+
+// const colors = ["red", "green", "blue"]
+
+// colors.splice(2,0,"purple")
+// console.log(colors);
+
+
+// Заміна----------------
+
+// splice(position, num, new_element_1, new_element_2, ...)
+
+// const languages = ["C", "C++", "Java", "JavaScript"];
+
+// languages.splice(2, 1, "C#", "Swift", "Go");
+// console.log(languages);
+
+
+// Function----------------------
+
+// function multiply(){
+//   console.log("Це лог, на момент виклику функції multiply");
+// }
+
+
+// multiply()
+// multiply()
+// multiply()
+
+
+// 
+// function multiply(x, y, z ){
+//   console.log(`Результат множення дорівнює ${x*y*z}`);
+// }
+
+// multiply(2,3,5);
+// multiply(2,47,5);
+
+
+function multiply(x, y, z ){
+  console.log("Код до return виконується звичайним чином");
+
+  // Повертаємо результат виразу множення 
+
+  return
 }
-
-console.log(total);
 
