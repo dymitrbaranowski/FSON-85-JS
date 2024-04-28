@@ -174,14 +174,14 @@
 // for (const letter of letters) {
 //   console.log(letter);
 
-  // if (letter === letter.toLowerCase()) {
-  //   console.log("Эта буква в нижнем регистре!!! - ", letter);
+// if (letter === letter.toLowerCase()) {
+//   console.log("Эта буква в нижнем регистре!!! - ", letter);
 
-  //   invertedString += letter.toUpperCase();
-  // } else {
-  //   console.log("Эта буква в верхнем регистре!!! - ", letter);
-  //   invertedString += letter.toLowerCase();
-  // }
+//   invertedString += letter.toUpperCase();
+// } else {
+//   console.log("Эта буква в верхнем регистре!!! - ", letter);
+//   invertedString += letter.toLowerCase();
+// }
 
 //   const isEqual = letter === letter.toLowerCase();
 //   invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
@@ -189,28 +189,22 @@
 
 // console.log("invertedString: ", invertedString);
 
+// const cards = [
+//   'Карточка-1',
+// "Карточка-2",
+// "Карточка-3" ,
+// "Карточка-4",
+// "Карточка-5",
+// ];
 
-const cards = [
-  'Карточка-1',
-"Карточка-2",
-"Карточка-3" ,
-"Карточка-4",
-"Карточка-5",
-];
+// console.table(cards)
 
-console.table(cards)
+// const cardToRemove = "Карточка-3";
+// const index = cards.indexOf(cardToRemove);
 
-const cardToRemove = "Карточка-3";
-const index = cards.indexOf(cardToRemove);
+// console.log(index);
+// console.log(cards.splice(index, 3));;
+// console.table(cards)
 
-console.log(index);
-console.log(cards.splice(index, 3));;
-console.table(cards)
-
-
-const cardToInsert = 'Карточка-6';
-// const index = 3;
-
-
-
-
+// const cardToInsert = 'Карточка-6';
+// // const index = 3;
