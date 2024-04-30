@@ -192,6 +192,6 @@ const calculateTotalPrice = function (items) {
   console.log(items);
 };
 
-console.log(calculateTotalPrice[(1, 2, 3)]);
-console.log(calculateTotalPrice[(5, 10, 15, 20)]);
-console.log(calculateTotalPrice[(1, 2, 3)]);
+console.log(calculateTotalPrice([1, 2, 3]));
+console.log(calculateTotalPrice([5, 10, 15, 20]));
+console.log(calculateTotalPrice([1, 2, 3]));
