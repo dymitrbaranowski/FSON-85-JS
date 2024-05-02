@@ -210,21 +210,33 @@
 // console.log(add(1, 2, 3));
 // console.log(add(1, 2, 3, 4, 5, 6));
 
-const filterNumbers = function (array, ...args) {
-  console.log(array);
-  console.log(args);
-  uniqueElements = [];
+// const filterNumbers = function (array, ...args) {
+//   console.log(array);
+//   console.log(args);
+//   uniqueElements = [];
 
-  for (const element of array) {
-    if (args.includes(element)) {
-      uniqueElements.push(element);
-      console.log(`${element} есть везде`);
-    }
+//   for (const element of array) {
+//     if (args.includes(element)) {
+//       uniqueElements.push(element);
+//       console.log(`${element} есть везде`);
+//     }
+//   }
+
+//   return uniqueElements;
+// };
+
+// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+// console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
+// console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64));
+
+function checkAge(age) {
+  let message;
+
+  if (age >= 18) {
+    message = "ВИ повнолітня людина";
+  } else {
+    message = "Ви неповнолітня людина";
   }
 
-  console.log(uniqueElements);
-};
-
-console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
-console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
-console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64));
+  return message;
+}
