@@ -179,19 +179,52 @@
 // console.log("Результат функции", fn(10));
 // console.log("Результат функции", fn(1000));
 
-const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
-let total = 0;
+// const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// let total = 0;
 
-for (const value of cart) {
-  total += value;
-}
+// for (const value of cart) {
+//   total += value;
+// }
 
-console.log("Total:", total);
+// console.log("Total:", total);
 
-const calculateTotalPrice = function (items) {
-  console.log(items);
+// const calculateTotalPrice = function (items) {
+//   console.log(items);
+// };
+
+// console.log(calculateTotalPrice([1, 2, 3]));
+// console.log(calculateTotalPrice([5, 10, 15, 20]));
+// console.log(calculateTotalPrice([1, 2, 3]));
+
+// const add = function (...args) {
+//   console.log(args);
+//   let total = 0;
+
+//   for (const arg of args) {
+//     total += arg;
+//   }
+
+//   return total;
+// };
+
+// console.log(add(1, 2, 3));
+// console.log(add(1, 2, 3, 4, 5, 6));
+
+const filterNumbers = function (array, ...args) {
+  console.log(array);
+  console.log(args);
+  uniqueElements = [];
+
+  for (const element of array) {
+    if (args.includes(element)) {
+      uniqueElements.push(element);
+      console.log(`${element} есть везде`);
+    }
+  }
+
+  console.log(uniqueElements);
 };
 
-console.log(calculateTotalPrice([1, 2, 3]));
-console.log(calculateTotalPrice([5, 10, 15, 20]));
-console.log(calculateTotalPrice([1, 2, 3]));
+console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
+console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64));
