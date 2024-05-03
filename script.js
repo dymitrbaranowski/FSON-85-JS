@@ -229,14 +229,58 @@
 // console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
 // console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64));
 
-function checkAge(age) {
-  let message;
+// function checkAge(age) {
+//   let message;
 
-  if (age >= 18) {
-    message = "ВИ повнолітня людина";
-  } else {
-    message = "Ви неповнолітня людина";
-  }
+//   if (age >= 18) {
+//     message = "ВИ повнолітня людина";
+//   } else {
+//     message = "Ви неповнолітня людина";
+//   }
 
-  return message;
-}
+//   return message;
+// }
+
+// const array = [1, "Hello", null, true, [1, 2, 3]];
+
+// for (let item of array) {
+//   if (typeof item === "string") {
+//     item = false;
+//   }
+// }
+// console.log("for of", array);
+
+// for (let i = 0; i < array.length; i += 1) {
+//   if (typeof array[i] === "string") {
+//     array[i] = false;
+//   }
+// }
+
+// console.log("for", array);
+
+// const array = [1, "Hello", null, true, [1, 2, 3]];
+
+// let i = 0;
+
+// while (i < array.length) {
+//   console.log(array[i]);
+//   i += 1;
+// }
+
+// let value = 1;
+// let test = value;
+// value = "hello";
+
+// console.log("value", value);
+// console.log("test", test);
+
+// const array = [1, 2, 3, 4, 5];
+// const copy = array;
+
+// array.push(6, 7);
+// copy.push(8, 9);
+
+// console.log(array);
+// console.log(copy);
+
+const array = [1, 2, 3];
