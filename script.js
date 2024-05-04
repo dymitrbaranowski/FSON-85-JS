@@ -287,5 +287,5 @@ const array = [1, 2, 3];
 
 // array.push(4);
 array.pop();
-array.length = 0;
+array.length = 10;
 console.log(array);
