@@ -283,9 +283,18 @@
 // console.log(array);
 // console.log(copy);
 
-const array = [1, 2, 3];
+// const array = [1, 2, 3];
 
-// array.push(4);
-array.pop();
-array.length = 10;
-console.log(array);
+// // array.push(4);
+// array.pop();
+// array.length = 10;
+// console.log(array);
+
+const str = "Hello world I learning JS";
+// const arr = str.split(" ");
+// const result = arr.reverse().join(" ");
+// console.log(arr);
+
+const result = str.split(" ").reverse().join(" ");
+console.log(str);
+console.log(result);
