@@ -290,11 +290,51 @@
 // array.length = 10;
 // console.log(array);
 
-const str = "Hello world I learning JS";
-// const arr = str.split(" ");
-// const result = arr.reverse().join(" ");
+// const str = "Hello world I learning JS";
+// // const arr = str.split(" ");
+// // const result = arr.reverse().join(" ");
+// // console.log(arr);
+
+// const result = str.split(" ").reverse().join(" ");
+// console.log(str);
+// console.log(result);
+
+// // push pop
+// arr.push(1, 45, 14);
+// arr.pop();
+// arr.pop();
+// arr.pop();
 // console.log(arr);
 
-const result = str.split(" ").reverse().join(" ");
-console.log(str);
-console.log(result);
+// 0   1  2
+// arr.unshift(1, "a", [1, 2]);
+
+// // arr.shift();
+// // arr.shift();
+// // arr.shift();
+// // console.log(arr);
+
+// // slice
+
+// const result = arr.slice(1, 3);
+// console.log(result);
+// console.log(arr);
+
+// const arr = ["hello", "world", "JS"];
+// // splice
+
+// // arr.splice(1, 1, "from", "react", "node");
+// // console.log(arr);
+// const idx = arr.indexOf("world");
+// const result = arr.splice(idx, 1, "from");
+// console.log(arr);
+// console.log(result);
+
+// concat
+
+// const arr = [1, 2, 3];
+// const arr1 = [4, 5];
+// const arr2 = [6, 7];
+// const result = arr2.concat(arr, arr1);
+
+// console.log(result);
