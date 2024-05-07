@@ -338,3 +338,56 @@
 // const result = arr2.concat(arr, arr1);
 
 // console.log(result);
+
+// const str = "Hello world";
+
+// const result = str.split(" ").reverse().join(" ");
+// console.log(str);
+
+// console.log(result);
+
+// const arr = ["Hello", "world"];
+// const idx = arr.indexOf("world");
+
+// if (arr.indexOf("world") === -1) {
+//   console.log("No");
+// } else {
+//   console.log("Yes");
+// }
+// console.log(idx);
+// console.log(arr.includes("world"));
+
+// if (arr.includes("world")) {
+//   console.log("YES");
+// } else {
+//   console.log("NO");
+// }
+
+// const arr = ["Hello", "world"];
+
+// arr.push(1, "a", [1, 2]);
+// arr.pop();
+// arr.pop();
+// arr.pop();
+// console.log(arr);
+
+// arr.unshift(1, "a", [1, 2]);
+// // arr.shift();
+
+// // console.log(arr);
+
+// // slice
+// const result = arr.slice(1, 3);
+// console.log(result);
+
+const arr = ["Hello", "world", "Js"];
+
+// splice
+
+const idx = arr.indexOf("world");
+const result = arr.splice(idx, 1, "from");
+console.log(arr);
+
+// arr.splice(1, 0, "from", "ract", "node");
+// console.log(arr);
+console.log(result);
