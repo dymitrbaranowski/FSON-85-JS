@@ -503,21 +503,35 @@ const arr2 = [8, 9, 10, 11];
 // sum(arr1);
 // sum(arr2);
 
+// function add() {
+//   let sum = 0;
+//   //   const arr = Array.from(arguments);
+//   const arr = [...arguments];
+//   console.log(arr);
+//   console.log(arguments);
+//   //   for (let i = 0; i < arguments.length; i += 1) {
+//   //     sum += arguments[i];
+//   //   }
+//   for (const value of arguments) {
+//     sum += value;
+//   }
+//   console.log(sum);
+//   //   console.log(val + val1 + val2 + val3 + val4 + val5);
+// }
+// add(1, 2, 3, 4, 5, 6);
+// add(1, 2, 3, 4);
+// add(1, 2, 3, 4, 5);
+
 function add() {
   let sum = 0;
-  //   const arr = Array.from(arguments);
-  const arr = [...arguments];
-  console.log(arr);
-  console.log(arguments);
-  //   for (let i = 0; i < arguments.length; i += 1) {
-  //     sum += arguments[i];
-  //   }
+
   for (const value of arguments) {
     sum += value;
   }
-  console.log(sum);
-  //   console.log(val + val1 + val2 + val3 + val4 + val5);
+
+  return sum;
 }
-add(1, 2, 3, 4, 5, 6);
-add(1, 2, 3, 4);
-add(1, 2, 3, 4, 5);
+const response = add(1, 2, 3, 4, 5, 6);
+console.log(response);
+// add(1, 2, 3, 4);
+// add(1, 2, 3, 4, 5);
