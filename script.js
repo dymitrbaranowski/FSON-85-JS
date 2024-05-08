@@ -444,3 +444,80 @@
 // const result = string.split(" ").slice(1, -1).join(" ");
 
 // console.log(result);
+
+// const string = "Wellcome to the future";
+// const result = string.split("").reverse().join("");
+// console.log(result);
+
+// const langs = ["cpython", "bjavascript", "ac++", "haskel", "php", "ruby"];
+
+// // for (const str of langs) {
+// //   console.log(str[0]);
+// // }
+// // const arr = [];
+// for (let i = 0; i < langs.length; i += 1) {
+//   if (langs[0] > langs[i]) {
+//     const result = langs.splice(i, 1)[0];
+//     langs.unshift(result);
+//   }
+// }
+// console.log(langs);
+
+// const numbers = [2, 17, 94, 1, -23, 37];
+// let min = numbers[0];
+// for (const value of numbers) {
+//   if (value < min) {
+//     min = value;
+//   }
+// }
+// console.log(min);
+
+const arr = [1, 2, 3, 4];
+const arr1 = [5, 6, 7, 8];
+const arr2 = [8, 9, 10, 11];
+
+// function sum(item) {
+//   for (let i = 0; i < arr.length; i += 1) {
+//     item[i] = item[i] * 2;
+//   }
+//   console.log(item);
+// }
+// sum(arr);
+// sum(arr1);
+// sum(arr2);
+
+// function declaration---------------
+// function name(){
+
+// }
+
+// expression
+
+// const sum = function (item) {
+//   for (let i = 0; i < arr.length; i += 1) {
+//     item[i] = item[i] * 2;
+//   }
+//   console.log(item);
+// };
+// sum(arr);
+// sum(arr1);
+// sum(arr2);
+
+function add() {
+  let sum = 0;
+  //   const arr = Array.from(arguments);
+  const arr = [...arguments];
+  console.log(arr);
+  console.log(arguments);
+  //   for (let i = 0; i < arguments.length; i += 1) {
+  //     sum += arguments[i];
+  //   }
+  for (const value of arguments) {
+    sum += value;
+  }
+  console.log(sum);
+  //   console.log(val + val1 + val2 + val3 + val4 + val5);
+}
+add(1, 2, 3, 4, 5, 6);
+add(1, 2, 3, 4);
+add(1, 2, 3, 4, 5);
