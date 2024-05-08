@@ -380,14 +380,67 @@
 // const result = arr.slice(1, 3);
 // console.log(result);
 
-const arr = ["Hello", "world", "Js"];
+// const arr = ["Hello", "world", "Js"];
 
-// splice
+// // splice
 
-const idx = arr.indexOf("world");
-const result = arr.splice(idx, 1, "from");
-console.log(arr);
-
-// arr.splice(1, 0, "from", "ract", "node");
+// const idx = arr.indexOf("world");
+// const result = arr.splice(idx, 1, "from");
 // console.log(arr);
-console.log(result);
+
+// // arr.splice(1, 0, "from", "ract", "node");
+// // console.log(arr);
+// console.log(result);
+
+// const genres = ["Jazz", "Blues"];
+// // genres.push("Rock-n-roll");
+// // console.log(genres.shift());
+// // genres.unshift("Country", "Raggae");
+// // console.log(genres);
+// genres.splice(genres.lengths, 0, "Rock-n-roll");
+// console.log(genres.splice(0, 1, "Country", "Raggay"));
+// console.log(genres);
+
+// const values = "8 11";
+// const arr = values.split(" ");
+// const first = Number(arr[0]);
+// const last = Number(arr[arr.length - 1]);
+// const result = first * last;
+// console.log(result);
+
+// const fruits = ["🍎", "🍒", "🍑", "🍌", "🍋"];
+
+// // for (let i = 0; i < fruits.length; i += 1) {
+// //   console.log(`${i + 1} - ${fruits[i]}`);
+// // }
+
+// for (let i = 0, n = 1; i < fruits.length; i += 1, n += 1) {
+//   console.log(`${n} - ${fruits[i]}`);
+// }
+
+// let names = "Jacobe, William, Solomon,Artem";
+// let phones = "4534975477, 77234543713, 4978573547";
+// names = names.split(",");
+// console.log(names);
+// phones = phones.split(",");
+// console.log(phones);
+// for (let i = 0; i < names.length, i < phones.length; i += 1) {
+//   console.log(`${names[i]} - ${phones[i]}}`);
+// }
+
+// const string = "Wellcome to the future";
+// const arr = string.split(" ");
+// const test = arr.push("1234");
+// console.log(test);
+// console.log(arr);
+
+// const arr = string.split(" ");
+// arr.pop();
+// arr.shift();
+
+// const result = arr.join(" ");
+// console.log(result);
+
+// const result = string.split(" ").slice(1, -1).join(" ");
+
+// console.log(result);
