@@ -572,3 +572,18 @@ const arr2 = [8, 9, 10, 11];
 
 // foo(test);
 // console.log(test);
+
+function createString(name, year) {
+  const result = add(year);
+  return `${name} years ${result}`;
+}
+
+console.log(createString("Mango", [1, 2, 3]));
+
+function add(arr) {
+  let sum = 0;
+  for (const num of arr) {
+    sum += num;
+  }
+  return sum;
+}
