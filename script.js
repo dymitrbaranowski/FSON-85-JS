@@ -522,16 +522,53 @@ const arr2 = [8, 9, 10, 11];
 // add(1, 2, 3, 4);
 // add(1, 2, 3, 4, 5);
 
-function add() {
-  let sum = 0;
+// function largeNumber() {
+//   let sum = 0;
 
-  for (const value of arguments) {
-    sum += value;
-  }
+//   for (const value of arguments) {
+//     sum += value;
+//     if (sum > 10) {
+//       return true;
+//     }
+//   }
 
-  return sum;
-}
-const response = add(1, 2, 3, 4, 5, 6);
-console.log(response);
-// add(1, 2, 3, 4);
-// add(1, 2, 3, 4, 5);
+//   return false;
+// }
+// const response = largeNumber(1, 2, 3);
+// console.log(response);
+// console.log(largeNumber(1, 2, 3, 4));
+// console.log(largeNumber(1, 2, 3, 4, 5, 6));
+
+// function add(val, val1 = 0) {
+//   return val + val1;
+// }
+
+// console.log(add(3, 4));
+// console.log(add(5));
+// console.log(add(11));
+
+// let a = 10;
+
+// function foo() {
+//   let a = 15;
+//   a = 45;
+// }
+// foo();
+// console.log(a);
+
+// let a = 10;
+
+// function foo(a) {
+//   a = 45;
+// }
+// foo(a);
+// console.log(a);
+
+// const test = [1, 2, 3];
+
+// function foo(arr) {
+//   arr.splice(0, 1);
+// }
+
+// foo(test);
+// console.log(test);
