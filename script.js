@@ -774,3 +774,52 @@
 // updateCourse("Expres", "Next.JS");
 // console.log(courses);
 // console.log(updateCourse("Express", "Next.JS"));
+
+// const arr11 = ["a", "b", "c"];
+// const idx = arr11.indexOf("a");
+// // if (idx) {
+// //   console.log("Yes");
+// // } else {
+// //   console.log("No");
+// // }
+// // console.log(idx);
+// // -(x + 1);
+// console.log(!!-(idx + 1));
+// console.log(!!~idx);
+// console.log(Boolean(~idx));
+
+// var data = [5, 1, 4, 2, 8];
+// function sortBublle(data) {
+//   for (var i = data.length - 1; i > 0; i--) {
+//     var counter = 0;
+//     for (var j = 0; j < i; j++) {
+//       if (data[j] > data[j + 1]) {
+//         var tmp = data[j];
+//         data[j] = data[j + 1];
+//         data[j + 1] = tmp;
+//         counter++;
+//       }
+//     }
+//     if (counter == 0) {
+//       break;
+//     }
+//   }
+//   return document.write(data);
+// }
+// sortBublle(data);
+// function bubbleSort(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length - 1 - i; j++) {
+//       console.log(arr[j + 1]);
+//       if (arr[j] > arr[j + 1]) {
+//         const tmp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = tmp;
+//       }
+//     }
+//   }
+//   console.log(arr);
+// }
+
+// const test = [33, 245, 1, 15, 122, 5, 65, 90];
+// bubbleSort(test);
