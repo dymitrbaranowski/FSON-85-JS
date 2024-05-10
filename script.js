@@ -573,17 +573,57 @@ const arr2 = [8, 9, 10, 11];
 // foo(test);
 // console.log(test);
 
-function createString(name, year) {
-  const result = add(year);
-  return `${name} years ${result}`;
-}
+// function createString(name, year) {
+//   const result = add(year);
+//   return `${name} years ${result}`;
+// }
 
-console.log(createString("Mango", [1, 2, 3]));
+// console.log(createString("Mango", [1, 2, 3]));
 
-function add(arr) {
-  let sum = 0;
-  for (const num of arr) {
-    sum += num;
-  }
-  return sum;
-}
+// function add(arr) {
+//   let sum = 0;
+//   for (const num of arr) {
+//     sum += num;
+//   }
+//   return sum;
+// }
+
+// function calcBMI(weigth, heigth) {
+//   weigth = Number(weigth.replace(",", "."));
+//   heigth = Number(heigth.replace(",", "."));
+
+//   return Number(weigth / Math.pow(heigth, 2)).toFixed(1);
+//   // return Number((weigth / heigth ** 2).toFixed(1));
+// }
+
+// const bmi = calcBMI("88,3", "1.75");
+// console.log(bmi);
+
+// function min(a, b) {
+//   // if (a > b) {
+//   //   return b;
+//   // }
+//   // return a;
+
+//   return a > b ? b : a;
+// }
+
+// console.log(min(2, 5));
+// console.log(min(3, -1));
+// console.log(min(1, 1));
+
+// function getReactArea(dimentions) {
+//   dimentions = dimentions.split(" ");
+
+//   // const first = Number(dimentions[0]);
+//   // const second = Number(dimentions[1]);
+
+//   // return first * second;
+
+//   return Number(dimentions[0] * Number(dimentions[1]));
+//   // console.log(dimentions);
+// }
+
+// console.log(getReactArea("8 11"));
+// console.log(getReactArea("46 11"));
+// console.log(getReactArea("8 112"));
