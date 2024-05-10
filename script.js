@@ -472,9 +472,9 @@
 // }
 // console.log(min);
 
-const arr = [1, 2, 3, 4];
-const arr1 = [5, 6, 7, 8];
-const arr2 = [8, 9, 10, 11];
+// const arr = [1, 2, 3, 4];
+// const arr1 = [5, 6, 7, 8];
+// const arr2 = [8, 9, 10, 11];
 
 // function sum(item) {
 //   for (let i = 0; i < arr.length; i += 1) {
@@ -627,3 +627,150 @@ const arr2 = [8, 9, 10, 11];
 // console.log(getReactArea("8 11"));
 // console.log(getReactArea("46 11"));
 // console.log(getReactArea("8 112"));
+
+// function logItems(items) {
+//   for (let i = 0, num = 1; i < items.length; i += 1, num += 1) {
+//     console.log(`${num} - ${items[i]}`);
+//   }
+// }
+
+// logItems(["Mango", "POly", "Ajax"]);
+// logItems(["🍎", "🍒", "🍑", "🍌", "🍋"]);
+
+// function printsContactsInfo(names, phones) {
+//   names = names.split(",");
+//   phones = phones.split(",");
+//   console.log(phones);
+//   for (let i = 0; i < names.length, i < phones.length; i += 1) {
+//     console.log(`${names[i]} - ${phones[i]}`);
+//   }
+// }
+
+// printsContactsInfo(
+//   "Jacob, William, Solomon, Artemiy",
+//   "3423848238,3572573232,32834848448,47547743974754"
+// );
+
+// function findLargestNumber() {
+//   //   const arr = Array.from(arguments);
+//   const arr = [...arguments];
+//   let max = arr[0];
+//   for (const num of arr) {
+//     if (num > max) {
+//       max = num;
+//     }
+//   }
+//   return max;
+// }
+
+// console.log(findLargestNumber(2, 17, 94, 1, 23, 37));
+// console.log(findLargestNumber(49, 4, 7, 83, 12));
+// console.log(findLargestNumber([1, 3, 5, 7], 6, 7, 8));
+
+// function findLargestNumber() {
+//   let max;
+//   for (const num of arguments) {
+//     if (typeof num === "number") {
+//       max = num;
+//       break;
+//     }
+//   }
+
+//   for (const num of arguments) {
+//     if (typeof num === "number") {
+//       if (num > max) {
+//         max = num;
+//       }
+//     } else {
+//       findLargestNumber(...num);
+//       findLargestNumber(...num);
+//       findLargestNumber(...num);
+//     }
+//   }
+
+//   return max;
+// }
+
+// console.log(findLargestNumber([[1, 433], 5, 7], 6, 7, 8, 88, 123));
+
+// function calAvarage() {
+//   console.log(arguments);
+//   let total = 0;
+//   for (const num of arguments) {
+//     total += num;
+//   }
+//   return total / arguments.length;
+// }
+
+// console.log(calAvarage(1, 2, 3, 4));
+// console.log(calAvarage(14, 8, 2));
+// console.log(calAvarage(27, 43, 2, 8, 36));
+
+// function formatTime(minutes) {
+//   const hours = Math.floor(minutes / 60);
+//   minutes = minutes % 60;
+
+//   return `${hours.toString().padStart(2, "0")} : ${minutes
+//     .toString()
+//     .padStart(2, "0")}`;
+// }
+
+// console.log(formatTime(70));
+// console.log(formatTime(450));
+// console.log(formatTime(1441));
+
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+// function addCourse(course) {
+//   if (courses.includes(course)) {
+//     return "Ви вже маєте такий курс";
+//   }
+//   courses.push(course);
+// }
+
+// addCourse("Express");
+// console.log(courses);
+
+// console.log(addCourse("CSS"));
+
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+// function removeCourse(course) {
+//   if (course.includes(course)) {
+//     const idx = courses.indexOf(course);
+//     courses.splice(idx, 1);
+
+//     return;
+//   }
+
+//   return "Кур із таким імям не знайдено";
+// }
+// console.log(!!~0);
+// function removeCourse(course) {
+//   const idx = courses.indexOf(course);
+//   if (!!~idx) {
+//     courses.splice(idx, 1);
+//     return;
+//   }
+//   return "Курc із таким імям не знайдено";
+// }
+
+// removeCourse("React");
+// console.log(courses);
+
+// console.log(removeCourse("Vue"));
+
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+// function updateCourse(oldCourse, newCourse) {
+//   const idx = courses.indexOf(oldCourse);
+//   if (!!~idx) {
+//     courses.splice(idx, 1, newCourse);
+//     return;
+//   }
+//   return "Курc із таким імям не знайдено";
+// }
+
+// updateCourse("Expres", "Next.JS");
+// console.log(courses);
+// console.log(updateCourse("Express", "Next.JS"));
