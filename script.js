@@ -823,3 +823,30 @@
 
 // const test = [33, 245, 1, 15, 122, 5, 65, 90];
 // bubbleSort(test);
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+
+//   for (const number of numbers) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+// }
+
+// console.log(filterArray([2, 3, 4, 5, 7, 8, 9, 10], 4));
+
+// function getEvenNumbers(start, end) {
+//   let evenNumbers = [];
+
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       evenNumbers.push(i);
+//     }
+//   }
+
+//   return evenNumbers;
+// }
+// console.log(getEvenNumbers(3, 11));
