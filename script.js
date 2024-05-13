@@ -929,3 +929,36 @@
 //   includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")
 // );
 // console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
+
+// function calcSum(numOne, numTwo, more, less) {
+//   let numSum = numOne + numTwo;
+
+//   if (numSum > 3) {
+//     more();
+//   } else {
+//     less();
+//   }
+// }
+
+// function showMoreMessage() {
+//   console.log("Больше чем 3");
+// }
+
+// function showLessMessage() {
+//   console.log("Меньше чем 3");
+// }
+
+// calcSum(1, 5, showMoreMessage, showLessMessage);
+
+// let getMessage = (text, name) => text + ", " + name + "! ";
+
+// console.log(getMessage("Привет", "Вася"));
+
+//
+
+// Многострочная стрелочная фуннкция
+// let getMessage = (text, name) => {
+//   let message = text + ", " + name + "!";
+//   return message;
+// };
+// console.log(getMessage("Привет", "Вася"));
