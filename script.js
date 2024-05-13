@@ -850,3 +850,82 @@
 //   return evenNumbers;
 // }
 // console.log(getEvenNumbers(3, 11));
+
+// function getEvenNumber(start, end) {
+//   let evenNumbers = [];
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       evenNumbers.push(i);
+//     }
+//   }
+//   return evenNumbers;
+// }
+
+// console.log(getEvenNumber(2, 5));
+
+// for (let i = 0; i <= 5; i += 1) {
+//   console.log(i);
+
+//   if (i === 3) {
+//     console.log("Знайшли число 3, перериваємо виконання циклу");
+//     break;
+//   }
+// }
+
+// const start = 6;
+// const end = 27;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+
+//     break;
+//   }
+// }
+// console.log(number);
+
+// function fn() {
+//   for (let i = 0; i <= 5; i += 1) {
+//     console.log(i);
+//     if (i === 3) {
+//       console.log(
+//         "Знайшли число 3, робимо повернення, перериваючи цикл і функцію"
+//       );
+//       return i;
+//     }
+//   }
+//   //   Цей console.log(object) не виконається
+//   console.log("Лог після циклу в тілі функції");
+// }
+
+// const result = fn();
+// console.log("Лог після виходу з функції");
+// console.log(`Результат виконання функції - ${result}`);
+
+// function findeNumber(start, end, divisor) {
+//   let number;
+
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       number = i;
+//       return i;
+//     }
+//   }
+//   return number;
+// }
+
+// console.log(findeNumber(2, 6, 5));
+
+// function includes(array, value) {
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(
+//   includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")
+// );
+// console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
