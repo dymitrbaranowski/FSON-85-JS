@@ -962,3 +962,36 @@
 //   return message;
 // };
 // console.log(getMessage("Привет", "Вася"));
+
+// function unixTime() {
+//   let time = Math.floor(new Date().getTime());
+//   console.log(time);
+// }
+
+// unixTime();
+// unixTime();
+
+// function randomInt() {
+//   const min = 100;
+//   const max = 200;
+//   let rand = Math.floor(min + Math.random() * (max + 1 - min));
+//   console.log(rand);
+// }
+
+// randomInt();
+
+// function randomInt() {
+//   console.log("random int 555");
+// }
+
+// randomInt();
+// randomInt();
+
+let min = 100;
+let max = 200;
+function rand() {
+  let rand = Math.floor(min + Math.random() * (max + 1 - min));
+  console.log(rand);
+}
+
+rand();
