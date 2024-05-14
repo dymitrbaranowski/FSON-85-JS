@@ -987,11 +987,35 @@
 // randomInt();
 // randomInt();
 
-let min = 100;
-let max = 200;
-function rand() {
-  let rand = Math.floor(min + Math.random() * (max + 1 - min));
-  console.log(rand);
-}
+// let min = 100;
+// let max = 200;
+// function rand() {
+//   let rand = Math.floor(min + Math.random() * (max + 1 - min));
+//   console.log(rand);
+// }
 
-rand();
+// rand();
+
+// function createRandomArray(len) {
+//   const arr = [];
+//   for (let i = 0; i < len; i += 1) {
+//     arr.push(Math.floor(Math.random() * 1000));
+//   }
+//   console.log("random array is: ", arr);
+//   return arr;
+// }
+
+// function bubbleSort(arr = []) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 1; j < arr.length; j++) {
+//       const temp = arr[j];
+//       if (arr[j - 1] > arr[j]) {
+//         arr[j] = arr[j - 1];
+//         arr[j - 1] = temp;
+//       }
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log("sorted arr:", bubbleSort(createRandomArray(10)));
