@@ -1019,3 +1019,28 @@
 // }
 
 // console.log("sorted arr:", bubbleSort(createRandomArray(10)));
+
+// Обэкты-----------
+// const playlist = {
+//   name: "Мой супер плейлист",
+//   rating: 5,
+//   tracks: ["Трек-1", "трек-2", "трек-3"],
+//   trackCount: 3,
+// };
+
+// console.log(playlist);
+
+// const propertyName = "tracks";
+
+// console.log(playlist.propertyName);
+// console.log(playlist[propertyName]);
+
+// const username = "Mango";
+// const email = "mango@mail.com";
+
+// const signupData = {
+//   username,
+//   email,
+// };
+
+// console.log(signupData);
