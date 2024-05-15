@@ -1044,3 +1044,34 @@
 // };
 
 // console.log(signupData);
+
+// Вычисляемые свойства ---
+
+// <input name="color" value="tomato" >
+// const inputName = "color";
+// const inputValue = "tomato";
+
+// const colorPickerData = {
+//   [inputName]: inputValue,
+// };
+
+// console.log(colorPickerData);
+/*
+   Сcылочный тип
+*/
+
+// const a = { x: 1, y: 2 };
+// const b = a;
+
+// const a = [1, 2, 3];
+
+// a.hello = ":)";
+
+// console.log(a);
+
+// const fn = function () {
+//   console.log("hello");
+// };
+
+// fn.hello = ":)";
+// console.dir(fn.hello);
