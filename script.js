@@ -1297,11 +1297,28 @@ const findeFriendByName = function (allFriends, friendName) {
 
 const getAllFriends = function (allFriends) {
   const names = [];
+
   for (const friend of allFriends) {
     console.log(friend.name);
     names.push(friend.name);
   }
-  console.log(names);
+  //   console.log(names);
+  return names;
 };
 
-console.log(getAllFriends(friends));
+// console.log(getAllFriends(friends));
+
+const getOnlineFriends = function (allFriends) {
+  const onlineFriends = [];
+  for (const friend of allFriends) {
+    console.log(friend);
+    console.log(friend.online);
+
+    if (friend.online) {
+      onlineFriends.push(friend);
+    }
+  }
+  return onlineFriends;
+};
+
+console.log(getOnlineFriends(friends));
