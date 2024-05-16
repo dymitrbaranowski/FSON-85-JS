@@ -1106,38 +1106,202 @@
 // bookShelf.removeBook("The Mist");
 // console.log(bookShelf.getBooks());
 
-const playlist = {
-  name: "Мой супер плейлист",
-  rating: 5,
-  tracks: ["Трек-1", "трек-2", "трек-3"],
+// const playlist = {
+//   name: "Мой супер плейлист",
+//   rating: 5,
+//   tracks: ["Трек-1", "трек-2", "трек-3"],
 
-  chamgeName(newName) {
-    console.log("this внутри changeName: ", this);
+//   chamgeName(newName) {
+//     console.log("this внутри changeName: ", this);
 
-    this.name = newName;
-  },
-  addTrack(track) {
-    this.tracks.push(track);
-  },
-  updateRating(newRating) {
-    this.rating = newRating;
-  },
-  getTrackCount() {
-    return this.tracks.length;
-  },
+//     this.name = newName;
+//   },
+//   addTrack(track) {
+//     this.tracks.push(track);
+//   },
+//   updateRating(newRating) {
+//     this.rating = newRating;
+//   },
+//   getTrackCount() {
+//     return this.tracks.length;
+//   },
+// };
+
+// console.log(playlist.getTrackCount());
+
+// playlist.chamgeName("Новое имя");
+// console.log(playlist);
+
+// playlist.addTrack("Новый трек 1");
+// console.log(playlist.getTrackCount());
+// playlist.addTrack("Новый трек 2");
+// playlist.addTrack("Новый трек 3");
+// console.log(playlist.getTrackCount());
+
+// playlist.updateRating(4);
+
+// console.log(playlist);
+
+// Перебираючі методи обєкта--------------
+
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
+
+// let totalFeedback = 0;
+// const keys = Object.keys(feedback);
+
+// console.log(keys);
+
+// for (const key of keys) {
+//   console.log(key);
+//   console.log(feedback[key]);
+
+//   totalFeedback += feedback[key];
+// }
+
+// console.log("totalFeedback:", totalFeedback);
+
+// const values = Object.values(feedback);
+
+// console.log(values);
+
+// for (const value of values) {
+//   console.log(value);
+
+//   totalFeedback += value;
+// }
+
+// console.log("totalFeedback:", totalFeedback);
+
+// const friends = [
+//   { name: "Msngo", online: false },
+//   { name: "Kiwi", online: true },
+//   { name: "Poly", online: true },
+//   { name: "Ajax", online: false },
+// ];
+
+// console.log(friends);
+
+// const goods = {
+//   apples: 6,
+//   grapes: 3,
+//   bread: 4,
+// };
+
+// const values = Object.values(goods);
+
+// let total = 0;
+
+// for (const value of values) {
+//   total += value;
+// }
+
+// console.log(total);
+
+// const book = {
+//   title: "the Last Kingdom",
+//   author: "Bernard Cornwell",
+//   rating: 8.38,
+// };
+// const keys = Object.keys(book);
+// console.log(keys);
+
+// const values = Object.values(book);
+// console.log(values);
+
+// const entries = Object.entries(book);
+// console.log(entries);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "На березі спокійних вод",
+//     author: "Роберт Шеклі",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "Сон смішної людини",
+//     author: "Федір Достоєвський",
+//     rating: 7.75,
+//   },
+// ];
+
+// for (const book of books) {
+//   // Об'єкт книги
+//   console.log(book);
+//   // Назва
+//   console.log(book.title);
+//   // Автор
+//   console.log(book.author);
+//   // Рейтинг
+//   console.log(book.rating);
+// }
+
+// const bookNames = [];
+
+// for (const book of books) {
+//   bookNames.push(book.title);
+// }
+
+// console.log(bookNames);
+
+// let totalRating = 0;
+
+// for (const book of books) {
+//   totalRating += book.rating;
+// }
+
+// const avaregRating = (totalRating / books.length).toFixed(1);
+// console.log(avaregRating);
+
+const friends = [
+  { name: "Mango", online: false },
+  { name: "Kiwi", online: true },
+  { name: "Poly", online: true },
+  { name: "Ajax", online: false },
+];
+
+console.table(friends);
+
+// for (const friend of friends) {
+//   console.log(friend);
+
+//   friend.newprop = 555;
+// }
+
+// console.table(friends);
+
+const findeFriendByName = function (allFriends, friendName) {
+  for (const friend of allFriends) {
+    //  console.log(friend);
+    //  console.log(friend.name);
+
+    if (friend.name === friendName) {
+      return "Нашли!!!";
+    }
+  }
+  return "Не нашли";
 };
 
-console.log(playlist.getTrackCount());
+// console.log(findeFriendByName(friends, "Poly"));
+// console.log(findeFriendByName(friends, "Chelsy"));
 
-playlist.chamgeName("Новое имя");
-console.log(playlist);
+//  Получить все имена друзей
 
-playlist.addTrack("Новый трек 1");
-console.log(playlist.getTrackCount());
-playlist.addTrack("Новый трек 2");
-playlist.addTrack("Новый трек 3");
-console.log(playlist.getTrackCount());
+const getAllFriends = function (allFriends) {
+  const names = [];
+  for (const friend of allFriends) {
+    console.log(friend.name);
+    names.push(friend.name);
+  }
+  console.log(names);
+};
 
-playlist.updateRating(4);
-
-console.log(playlist);
+console.log(getAllFriends(friends));
