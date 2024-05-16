@@ -1105,3 +1105,39 @@
 // console.log(bookShelf.getBooks());
 // bookShelf.removeBook("The Mist");
 // console.log(bookShelf.getBooks());
+
+const playlist = {
+  name: "Мой супер плейлист",
+  rating: 5,
+  tracks: ["Трек-1", "трек-2", "трек-3"],
+
+  chamgeName(newName) {
+    console.log("this внутри changeName: ", this);
+
+    this.name = newName;
+  },
+  addTrack(track) {
+    this.tracks.push(track);
+  },
+  updateRating(newRating) {
+    this.rating = newRating;
+  },
+  getTrackCount() {
+    return this.tracks.length;
+  },
+};
+
+console.log(playlist.getTrackCount());
+
+playlist.chamgeName("Новое имя");
+console.log(playlist);
+
+playlist.addTrack("Новый трек 1");
+console.log(playlist.getTrackCount());
+playlist.addTrack("Новый трек 2");
+playlist.addTrack("Новый трек 3");
+console.log(playlist.getTrackCount());
+
+playlist.updateRating(4);
+
+console.log(playlist);
