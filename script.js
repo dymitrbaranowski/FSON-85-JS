@@ -1075,3 +1075,33 @@
 
 // fn.hello = ":)";
 // console.dir(fn.hello);
+// const bookShelf = {
+//   books: ["The last Kingdom"],
+//   getBooks() {
+//     console.log(this);
+//   },
+// };
+
+// bookShelf.getBooks();
+
+// const bookShelf = {
+//   books: ["The last Kingdom"],
+//   getBooks() {
+//     return this.books;
+//   },
+//   addBook(bookName) {
+//     this.books.push(bookName);
+//   },
+//   removeBook(bookName) {
+//     const bookIndex = this.books.indexOf(bookName);
+
+//     this.books.splice(bookIndex, 1);
+//   },
+// };
+
+// console.log(bookShelf.getBooks());
+// bookShelf.addBook("The Mist");
+// bookShelf.addBook("Dream Guardian");
+// console.log(bookShelf.getBooks());
+// bookShelf.removeBook("The Mist");
+// console.log(bookShelf.getBooks());
