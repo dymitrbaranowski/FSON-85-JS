@@ -1261,64 +1261,120 @@
 // const avaregRating = (totalRating / books.length).toFixed(1);
 // console.log(avaregRating);
 
-const friends = [
-  { name: "Mango", online: false },
-  { name: "Kiwi", online: true },
-  { name: "Poly", online: true },
-  { name: "Ajax", online: false },
-];
-
-console.table(friends);
-
-// for (const friend of friends) {
-//   console.log(friend);
-
-//   friend.newprop = 555;
-// }
+// const friends = [
+//   { name: "Mango", online: false },
+//   { name: "Kiwi", online: true },
+//   { name: "Poly", online: true },
+//   { name: "Ajax", online: false },
+// ];
 
 // console.table(friends);
 
-const findeFriendByName = function (allFriends, friendName) {
-  for (const friend of allFriends) {
-    //  console.log(friend);
-    //  console.log(friend.name);
+// // for (const friend of friends) {
+// //   console.log(friend);
 
-    if (friend.name === friendName) {
-      return "Нашли!!!";
-    }
-  }
-  return "Не нашли";
+// //   friend.newprop = 555;
+// // }
+
+// // console.table(friends);
+
+// const findeFriendByName = function (allFriends, friendName) {
+//   for (const friend of allFriends) {
+//     //  console.log(friend);
+//     //  console.log(friend.name);
+
+//     if (friend.name === friendName) {
+//       return "Нашли!!!";
+//     }
+//   }
+//   return "Не нашли";
+// };
+
+// // console.log(findeFriendByName(friends, "Poly"));
+// // console.log(findeFriendByName(friends, "Chelsy"));
+
+// //  Получить все имена друзей
+
+// const getAllFriends = function (allFriends) {
+//   const names = [];
+
+//   for (const friend of allFriends) {
+//     console.log(friend.name);
+//     names.push(friend.name);
+//   }
+//   //   console.log(names);
+//   return names;
+// };
+
+// // console.log(getAllFriends(friends));
+
+// const getOnlineFriends = function (allFriends) {
+//   const onlineFriends = [];
+//   for (const friend of allFriends) {
+//     console.log(friend);
+//     console.log(friend.online);
+
+//     if (friend.online) {
+//       onlineFriends.push(friend);
+//     }
+//   }
+//   return onlineFriends;
+// };
+
+// // console.log(getOnlineFriends(friends));
+
+// const getOfflineFriends = function (allFriends) {
+//   const offlineFriends = [];
+
+//   for (const friend of allFriends) {
+//     console.log(friend.online);
+
+//     if (!friend.online) {
+//       offlineFriends.push(friend);
+//     }
+//   }
+//   return offlineFriends;
+// };
+
+// // console.log(getOfflineFriends(friends));
+
+// const getFriendsByOnlineStatus = function (allFriends) {
+//   const friendsByStatus = {
+//     online: [],
+//     offline: [],
+//   };
+
+//   for (const friend of allFriends) {
+//     if (friend.online) {
+//       friendsByStatus.online.push(friend);
+//       continue;
+//     }
+//     friendsByStatus.offline.push(friend);
+//   }
+
+//   return friendsByStatus;
+// };
+
+// // console.log(getFriendsByOnlineStatus(friends));
+
+const cart = {
+  items: [],
+  getItems() {
+    return this.items;
+  },
+  add(product) {},
+  remove(productName) {},
+  clear() {},
+  countTotalPrice() {},
+  increaseQuantity(productName) {},
+  decreaseQuantity(productName) {},
 };
 
-// console.log(findeFriendByName(friends, "Poly"));
-// console.log(findeFriendByName(friends, "Chelsy"));
+console.log(cart.getItems());
 
-//  Получить все имена друзей
+cart.add({ name: "🍎", price: 50 });
+cart.add({ name: "🍋", price: 60 });
+cart.add({ name: "🍋", price: 60 });
+cart.add({ name: "🍑", price: 110 });
 
-const getAllFriends = function (allFriends) {
-  const names = [];
-
-  for (const friend of allFriends) {
-    console.log(friend.name);
-    names.push(friend.name);
-  }
-  //   console.log(names);
-  return names;
-};
-
-// console.log(getAllFriends(friends));
-
-const getOnlineFriends = function (allFriends) {
-  const onlineFriends = [];
-  for (const friend of allFriends) {
-    console.log(friend);
-    console.log(friend.online);
-
-    if (friend.online) {
-      onlineFriends.push(friend);
-    }
-  }
-  return onlineFriends;
-};
-
-console.log(getOnlineFriends(friends));
+console.log(cart.getItems());
