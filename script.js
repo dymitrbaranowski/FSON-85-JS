@@ -1357,24 +1357,60 @@
 
 // // console.log(getFriendsByOnlineStatus(friends));
 
-const cart = {
-  items: [],
-  getItems() {
-    return this.items;
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {},
+//   remove(productName) {},
+//   clear() {},
+//   countTotalPrice() {},
+//   increaseQuantity(productName) {},
+//   decreaseQuantity(productName) {},
+// };
+
+// console.log(cart.getItems());
+
+// cart.add({ name: "🍎", price: 50 });
+// cart.add({ name: "🍋", price: 60 });
+// cart.add({ name: "🍋", price: 60 });
+// cart.add({ name: "🍑", price: 110 });
+
+// console.log(cart.getItems());
+
+const user = {
+  name: "Test",
+  age: 28,
+  skills: ["html", "css", "js"],
+  country: {
+    Lviv: "Адреса з Львова",
+    Odessa: "Адреса з Одеси",
   },
-  add(product) {},
-  remove(productName) {},
-  clear() {},
-  countTotalPrice() {},
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
 };
 
-console.log(cart.getItems());
+// const test = user;
+// console.log(test === user);
+// const copyUser = { ...user };
+// const copyUser1 = JSON.parse(JSON.stringify(user));
 
-cart.add({ name: "🍎", price: 50 });
-cart.add({ name: "🍋", price: 60 });
-cart.add({ name: "🍋", price: 60 });
-cart.add({ name: "🍑", price: 110 });
+// console.log(copyUser === user);
+// console.log(copyUser.country === user.country);
 
-console.log(cart.getItems());
+// function iterObject(obj) {
+//   for (const key in obj) {
+//     if (typeof obj[key] === "object" && !Array.isArray(obj[key])) {
+//       iterObject(obj[key]);
+//     }
+//     // console.log(user.key);
+//     console.log("Ключ", key);
+//     console.log("Значення", obj[key]);
+//   }
+// }
+
+// iterObject(user);
+// console.log(user.country.Lviv);
+// console.log(user.name);
+// console.log(typeof user);
+// console.log(user["age"]);
+// console.log(user["country"]["Lviv"]);
