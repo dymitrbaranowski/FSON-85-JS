@@ -1379,15 +1379,18 @@
 
 // console.log(cart.getItems());
 
-const user = {
-  name: "Test",
-  age: 28,
-  skills: ["html", "css", "js"],
-  country: {
-    Lviv: "Адреса з Львова",
-    Odessa: "Адреса з Одеси",
-  },
-};
+// const user = {
+//   name: "Test",
+//   age: 28,
+//   skills: ["html", "css", "js"],
+//   country: {
+//     Lviv: "Адреса з Львова",
+//     Odessa: "Адреса з Одеси",
+//     testKey: {
+//       testValue: "Hello world",
+//     },
+//   },
+// };
 
 // const test = user;
 // console.log(test === user);
@@ -1409,8 +1412,39 @@ const user = {
 // }
 
 // iterObject(user);
-// console.log(user.country.Lviv);
-// console.log(user.name);
-// console.log(typeof user);
-// console.log(user["age"]);
-// console.log(user["country"]["Lviv"]);
+// // console.log(user.country.Lviv);
+// // console.log(user.name);
+// // console.log(typeof user);
+// // console.log(user["age"]);
+// // console.log(user["country"]["Lviv"]);
+
+const user = {
+  name: "Test",
+  age: 28,
+  skills: ["html", "css", "js"],
+  country: {
+    Lviv: "Адреса зі Львова",
+    Odessa: "Адреса з Одеси",
+    testKey: {
+      testValue: "Hello world",
+    },
+  },
+};
+
+const admin = Object.create(user);
+admin.name = "Admin admin";
+admin.age = 33;
+// console.log(admin.name);
+// console.log(admin);
+// for (const key in admin) {
+//   if (admin.hasOwnProperty(key)) {
+//     console.log(admin[key]);
+//   }
+// }
+
+const keys = Object.keys(admin);
+for (const key of keys) {
+  console.log(admin[key]);
+}
+
+console.log(keys);
