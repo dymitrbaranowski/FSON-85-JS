@@ -28,7 +28,7 @@ const Transaction = {
 const account = {
   balance: 0,
   transactions: [],
-  createTrasaction(amount, type) {
+  createTransaction(amount, type) {
     const obj = {
       id: Date.now(),
       amount,
@@ -42,7 +42,7 @@ const account = {
 
   deposit(amount) {
     this.balance += amount;
-    this.createTrasaction(amount, Transaction.DEPOSIT);
+    this.createTransaction(amount, Transaction.DEPOSIT);
   },
 };
 
