@@ -201,4 +201,31 @@
 
 // const c = Object.assign({}, a, b);
 // console.log(c);
-console.log(..."qwe");
+// console.log(..."qwe");
+
+// const c = {
+//   ...a,
+//   x: 10,
+//   ...b,
+//   y: 20,
+// };
+
+// console.log(c);
+
+// const defaultSettings = {
+//   theme: "ligth",
+//   showNotifications: true,
+//   hideSidebar: false,
+// };
+
+// const userSettings = {
+//   showNotifications: false,
+//   hideSidebar: true,
+// };
+
+// const finalSettings = {
+//   ...defaultSettings,
+//   ...userSettings,
+// };
+
+// console.log(finalSettings);
