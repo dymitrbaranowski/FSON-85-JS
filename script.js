@@ -229,3 +229,25 @@
 // };
 
 // console.log(finalSettings);
+
+const playlist = {
+  name: "Мой супер плейлист",
+  rating: 5,
+  tracks: ["трек-1", "трек-2", "трек-3"],
+  trackCount: 3,
+  author: "Mango",
+};
+
+const { rating, tracks, name, trackCount, author = 555 } = playlist;
+console.log(author);
+console.log(rating);
+console.log(tracks);
+console.log(name);
+console.log(trackCount);
+
+// console.log(
+//   playlist.name,
+//   playlist.rating,
+//   playlist.tracks,
+//   playlist.trackCount
+// );
