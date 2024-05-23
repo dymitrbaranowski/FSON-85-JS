@@ -230,20 +230,29 @@
 
 // console.log(finalSettings);
 
-const playlist = {
-  name: "Мой супер плейлист",
-  rating: 5,
-  tracks: ["трек-1", "трек-2", "трек-3"],
-  trackCount: 3,
-  author: "Mango",
-};
+// const playlist = {
+//   name: "Мой супер плейлист",
+//   rating: 5,
+//   tracks: ["трек-1", "трек-2", "трек-3"],
+//   trackCount: 3,
+//   author: "Mango",
+// };
 
-const { rating, tracks, name, trackCount, author = 555 } = playlist;
-console.log(author);
-console.log(rating);
-console.log(tracks);
-console.log(name);
-console.log(trackCount);
+// const {
+//   rating,
+//   tracks,
+//   name,
+//   trackCount: numberOfTracks = 0,
+//   author = 555,
+// } = playlist;
+
+// console.log(numberOfTracks);
+
+// console.log(author);
+// console.log(rating);
+// console.log(tracks);
+// console.log(name);
+// console.log(trackCount);
 
 // console.log(
 //   playlist.name,
@@ -251,3 +260,19 @@ console.log(trackCount);
 //   playlist.tracks,
 //   playlist.trackCount
 // );
+
+const profile = {
+  name: "Jacobe Gluke",
+  tag: "Jgluke",
+  location: "Ocho Rios, Jamaica",
+  avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg",
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308,
+  },
+};
+
+const { name, tag, location, avatar } = profile;
+
+console.log(name, tag, location, avatar);
