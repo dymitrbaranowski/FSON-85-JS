@@ -483,19 +483,75 @@
 
 // console.log(finalSettings);
 
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
-  // Change code below this line
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
 
-  return { completed, category, priority, ...data };
-  // Change code above this line
-}
-console.log(
-  makeTask({
-    category: "Homemade",
-    priority: "Low",
-    text: "Take out the trash",
-  })
-);
+//   return { completed, category, priority, ...data };
+//   // Change code above this line
+// }
+// console.log(
+//   makeTask({
+//     category: "Homemade",
+//     priority: "Low",
+//     text: "Take out the trash",
+//   })
+// );
+
+// Паттерн обэктного строя----------
+//
+
+// const showProfileInfo = function ({ name, tag, location, ...restProps }) {
+//   // console.log(name, tag, location, avatar, followers, views, likes);
+//   console.log(restProps);
+// };
+
+// const profile = {
+//   name: "Jacobs Gluke",
+//   tag: "Jgluke",
+//   location: "Ocj Rios , Jamaica",
+//   avatar: "https://s3.amazonaws.com/uifaces/",
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// showProfileInfo(profile);
+
+const cart = {
+  items: [],
+  getItems() {
+    return this.items;
+  },
+  add(product) {
+    this.items.push(product);
+  },
+  remove(productName) {
+    for (let i = 0; i < this.items.length; i += 1) {
+      const item = this.items[i];
+
+      if (productName === item.name) {
+        console.log("нашли такой продукт", productName);
+      }
+    }
+  },
+  clear() {},
+  countTotalProce() {},
+  increaseQuantity(productName) {},
+  decreaseQuantity(productName) {},
+};
+
+console.log(cart.getItems());
+
+cart.add({ name: "🍎", price: 50 });
+cart.add({ name: "🍋", price: 60 });
+cart.add({ name: "🫐", price: 60 });
+cart.add({ name: "🍑", price: 110 });
+
+console.table(cart.getItems());
+
+cart.remove("🍎");
