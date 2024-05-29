@@ -745,7 +745,15 @@ const cart = {
     return this.items;
   },
   add(product) {
-    this.items.push(product);
+    for (const item of this.items) {
+      console.log(item);
+    }
+    const newProduct = {
+      ...product,
+      quantity: 1,
+    };
+
+    this.items.push(newProduct);
   },
   remove(productName) {
     const { items } = this;
@@ -781,8 +789,12 @@ console.log(cart.getItems());
 
 cart.add({ name: "🍎", price: 50 });
 cart.add({ name: "🍋", price: 60 });
+cart.add({ name: "🍋", price: 60 });
 cart.add({ name: "🫐", price: 60 });
 cart.add({ name: "🍑", price: 110 });
+cart.add({ name: "🍒", price: 110 });
+cart.add({ name: "🍒", price: 110 });
+cart.add({ name: "🍒", price: 110 });
 
 console.table(cart.getItems());
 
