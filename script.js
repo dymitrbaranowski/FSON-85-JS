@@ -746,7 +746,10 @@ const cart = {
   },
   add(product) {
     for (const item of this.items) {
-      console.log(item);
+      if (item.name === product.name) {
+        item.quantity += 1;
+        return;
+      }
     }
     const newProduct = {
       ...product,
@@ -776,13 +779,14 @@ const cart = {
     const { items } = this;
     let total = 0;
 
-    for (const { price } of items) {
-      total += price;
+    for (const { price, quantity } of items) {
+      total += price * quantity;
     }
     return total;
   },
   increaseQuantity(productName) {},
   decreaseQuantity(productName) {},
+  getProductTotalPrice(product) {},
 };
 
 console.log(cart.getItems());
@@ -794,7 +798,6 @@ cart.add({ name: "🫐", price: 60 });
 cart.add({ name: "🍑", price: 110 });
 cart.add({ name: "🍒", price: 110 });
 cart.add({ name: "🍒", price: 110 });
-cart.add({ name: "🍒", price: 110 });
 
 console.table(cart.getItems());
 
@@ -803,5 +806,11 @@ console.log("Total: ", cart.countTotalPrice());
 cart.remove("🍋");
 console.table(cart.getItems());
 
-cart.clear();
-console.log(cart.getItems());
+// cart.clear();
+// console.log(cart.getItems());
+
+const getProductTotalPrice = function ({ price, quantity }) {
+  return price * quantity;
+};
+
+console.log(getProductTotalPrice(cart.items[1]));
