@@ -739,78 +739,108 @@
 //   // Change code above this line
 // };
 
-const cart = {
-  items: [],
-  getItems() {
-    return this.items;
-  },
-  add(product) {
-    for (const item of this.items) {
-      if (item.name === product.name) {
-        item.quantity += 1;
-        return;
-      }
-    }
-    const newProduct = {
-      ...product,
-      quantity: 1,
-    };
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {
+//     for (const item of this.items) {
+//       if (item.name === product.name) {
+//         item.quantity += 1;
+//         return;
+//       }
+//     }
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     };
 
-    this.items.push(newProduct);
-  },
-  remove(productName) {
-    const { items } = this;
+//     this.items.push(newProduct);
+//   },
+//   remove(productName) {
+//     const { items } = this;
 
-    for (let i = 0; i < items.length; i += 1) {
-      const { name } = items[i];
+//     for (let i = 0; i < items.length; i += 1) {
+//       const { name } = items[i];
 
-      if (productName === name) {
-        console.log("нашли такой продукт", productName);
-        console.log("индекс:", i);
+//       if (productName === name) {
+//         console.log("нашли такой продукт", productName);
+//         console.log("индекс:", i);
 
-        items.splice(i, 1);
-      }
-    }
-  },
-  clear() {
-    this.items = [];
-  },
-  countTotalPrice() {
-    const { items } = this;
-    let total = 0;
+//         items.splice(i, 1);
+//       }
+//     }
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+//   countTotalPrice() {
+//     const { items } = this;
+//     let total = 0;
 
-    for (const { price, quantity } of items) {
-      total += price * quantity;
-    }
-    return total;
-  },
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
-  getProductTotalPrice(product) {},
-};
+//     for (const { price, quantity } of items) {
+//       total += price * quantity;
+//     }
+//     return total;
+//   },
+//   increaseQuantity(productName) {},
+//   decreaseQuantity(productName) {},
+//   getProductTotalPrice(product) {},
+// };
 
-console.log(cart.getItems());
-
-cart.add({ name: "🍎", price: 50 });
-cart.add({ name: "🍋", price: 60 });
-cart.add({ name: "🍋", price: 60 });
-cart.add({ name: "🫐", price: 60 });
-cart.add({ name: "🍑", price: 110 });
-cart.add({ name: "🍒", price: 110 });
-cart.add({ name: "🍒", price: 110 });
-
-console.table(cart.getItems());
-
-console.log("Total: ", cart.countTotalPrice());
-
-cart.remove("🍋");
-console.table(cart.getItems());
-
-// cart.clear();
 // console.log(cart.getItems());
 
-const getProductTotalPrice = function ({ price, quantity }) {
-  return price * quantity;
-};
+// cart.add({ name: "🍎", price: 50 });
+// cart.add({ name: "🍋", price: 60 });
+// cart.add({ name: "🍋", price: 60 });
+// cart.add({ name: "🫐", price: 60 });
+// cart.add({ name: "🍑", price: 110 });
+// cart.add({ name: "🍒", price: 110 });
+// cart.add({ name: "🍒", price: 110 });
 
-console.log(getProductTotalPrice(cart.items[1]));
+// console.table(cart.getItems());
+
+// console.log("Total: ", cart.countTotalPrice());
+
+// cart.remove("🍋");
+// console.table(cart.getItems());
+
+// // cart.clear();
+// // console.log(cart.getItems());
+
+// const getProductTotalPrice = function ({ price, quantity }) {
+//   return price * quantity;
+// };
+
+// console.log(getProductTotalPrice(cart.items[1]));
+
+// const arr = [1, 2, 3];
+
+// const [, , three] = arr;
+
+// // console.log(two);
+// console.log(three);
+
+// const name = "value";
+// const { age, name: newName } = user;
+
+// console.log(age, name);
+// console.log(newName);
+// // const age = user.age;
+const user = {
+  name: "Test",
+  age: 11,
+  skills: {
+    html: true,
+    css: true,
+    js: false,
+    cars: {
+      audi: {
+        a: 6,
+      },
+      bmw: "x5",
+    },
+  },
+  languages: [{ html: true }, { css: false }],
+};
