@@ -844,3 +844,7 @@ const user = {
   },
   languages: [{ html: true }, { css: false }],
 };
+
+for (const language of user.languages) {
+  console.log(language);
+}
