@@ -828,23 +828,62 @@
 // console.log(age, name);
 // console.log(newName);
 // // const age = user.age;
-const user = {
-  name: "Test",
-  age: 11,
-  skills: {
-    html: true,
-    css: true,
-    js: false,
+// const user = {
+//   name: "Test",
+//   age: 11,
+//   skills: {
+//     html: true,
+//     css: true,
+//     js: false,
+//     cars: {
+//       audi: {
+//         a: 6,
+//       },
+//       bmw: "x5",
+//     },
+//   },
+//   languages: [{ html: true }, { css: false }],
+// };
+
+// for (const language of user.languages) {
+//   console.log(language);
+// }
+
+const users = [
+  {
+    name: "User1",
+    language: "html",
     cars: {
-      audi: {
-        a: 6,
-      },
+      audi: "a6",
+      bmw: "x6",
+    },
+  },
+  {
+    name: "User2",
+    language: "css",
+    cars: {
+      audi: "a8",
       bmw: "x5",
     },
   },
-  languages: [{ html: true }, { css: false }],
-};
+  {
+    name: "User3",
+    language: "js",
+    cars: {
+      audi: "a7",
+    },
+  },
+];
 
-for (const language of user.languages) {
-  console.log(language);
+// for (const {
+//   name,
+//   cars: { audi: car },
+// } of users) {
+//   console.log(name, car);
+// }
+for (const {
+  name,
+  cars: { audi, bmw },
+} of users) {
+  console.log(name, bmw);
 }
