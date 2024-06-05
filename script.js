@@ -848,31 +848,83 @@
 // for (const language of user.languages) {
 //   console.log(language);
 // }
+// const users = [
+//   {
+//     name: "User1",
+//     language: "html",
+//     car: {
+//       bmw: "x6",
+//     },
+//   },
+//   {
+//     name: "User2",
+//     language: "css",
+//     car: {
+//       audi: "a8",
+//       bmw: "x5",
+//     },
+//   },
+//   {
+//     name: "User3",
+//     language: "js",
+//     car: {
+//       audi: "a7",
+//     },
+//   },
+// ];
 
-// function createContact(partialContact) {
-//   return {
-//     id: generateId(),
-//     createdAt: new Date(),
-//     list: "default",
-//     ...partialContact,
-//   };
+// // for (const {
+// //   name,
+// //   cars: { audi: car },
+// // } of users) {
+// //   console.log(name, car);
+// // }
+// for (const {
+//   name,
+//   car: { audi: car },
+// } of users) {
+//   console.log(car);
 // }
 
-// console.log(
-//   createContact({
-//     name: "Mango",
-//     email: "mango@mail.com",
-//     list: "friends",
-//   })
-// );
-
-// console.log(
-//   createContact({
-//     name: "Poly",
-//     email: "poly@hotmail.com",
-//   })
-// );
-
-// function generateId() {
-//   return "_" + Math.random().toString(36).substr(2, 9);
+// function foo({ name, car: { bmw = "None" } = {} } = {}) {
+//   console.log(name, bmw);
 // }
+
+// foo({
+//   name: "User1",
+//   language: "html",
+//   car: {
+//     audi: "x4",
+//     bmw: "x5",
+//   },
+// });
+
+// foo({
+//   name: "User2",
+//   language: "html",
+// });
+
+// foo();
+
+// const arr1 = [12, 22, 3, 14, 45, 16, 57];
+// // // const min = Math.min(...arr);
+// // // console.log(min);
+
+// // const arr2 = [...arr1];
+// // // arr2.splice(0, 1);
+// // console.log(arr1 === arr2);
+
+// const [first, ...props] = arr1;
+// console.log(props);
+// console.log(first);
+// for (let i = 0; i < props.length; i += 1) {
+//   props[i] *= first;
+// }
+// console.log(props);
+
+function foo(first, second, ...args) {
+  console.log(args);
+}
+
+foo(1, 2, 3, 4, 5);
+>>>>>>> 10ff0974b0153ca4b3a3393a1ec953c7c3e6fbf7
