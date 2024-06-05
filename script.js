@@ -828,23 +828,51 @@
 // console.log(age, name);
 // console.log(newName);
 // // const age = user.age;
-const user = {
-  name: "Test",
-  age: 11,
-  skills: {
-    html: true,
-    css: true,
-    js: false,
-    cars: {
-      audi: {
-        a: 6,
-      },
-      bmw: "x5",
-    },
-  },
-  languages: [{ html: true }, { css: false }],
-};
+// const user = {
+//   name: "Test",
+//   age: 11,
+//   skills: {
+//     html: true,
+//     css: true,
+//     js: false,
+//     cars: {
+//       audi: {
+//         a: 6,
+//       },
+//       bmw: "x5",
+//     },
+//   },
+//   languages: [{ html: true }, { css: false }],
+// };
 
-for (const language of user.languages) {
-  console.log(language);
-}
+// for (const language of user.languages) {
+//   console.log(language);
+// }
+
+// function createContact(partialContact) {
+//   return {
+//     id: generateId(),
+//     createdAt: new Date(),
+//     list: "default",
+//     ...partialContact,
+//   };
+// }
+
+// console.log(
+//   createContact({
+//     name: "Mango",
+//     email: "mango@mail.com",
+//     list: "friends",
+//   })
+// );
+
+// console.log(
+//   createContact({
+//     name: "Poly",
+//     email: "poly@hotmail.com",
+//   })
+// );
+
+// function generateId() {
+//   return "_" + Math.random().toString(36).substr(2, 9);
+// }
