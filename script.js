@@ -24,3 +24,26 @@
 //     friendCount: 20,
 //   })
 // );
+
+const products = [
+  {
+    name: "apple",
+    qty: 4,
+  },
+];
+
+function getAllPropValues(propName) {
+  let valuesPropName = [];
+
+  for (const product of products) {
+    for (const key in product) {
+      console.log(key);
+      if (key === propName) {
+        valuesPropName.push(product[key]);
+      }
+    }
+  }
+  return valuesPropName;
+}
+
+getAllPropValues("name");
