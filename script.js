@@ -29,6 +29,7 @@ const products = [
   {
     name: "apple",
     qty: 4,
+    key: "Test",
   },
 ];
 
@@ -37,9 +38,12 @@ function getAllPropValues(propName) {
 
   for (const product of products) {
     for (const key in product) {
-      console.log(key);
+      // console.log(key);
       if (key === propName) {
-        valuesPropName.push(product[key]);
+        console.log(product[key]);
+        console.log(product.key);
+        // valuesPropName.push(product[key]);
+        // valuesPropName.push(product.key);
       }
     }
   }
