@@ -923,8 +923,111 @@
 // }
 // console.log(props);
 
-function foo(first, second, ...args) {
-  console.log(args);
+// function foo(first, second, ...args) {
+//   console.log(args);
+// }
+
+// foo(1, 2, 3, 4, 5);
+
+// const arr1 = [12, 22, 3, 14, 45, 16, 57];
+
+// function foo(first, second, ...rest) {
+//   console.log(arguments);
+//   console.log(first, second, rest);
+// }
+// foo(...arr1);
+
+// /**
+//  * Розраховуємо індекс маси тіла людини
+//  * @param {Object} obj
+//  * @returns {Number} BMI
+//  */
+// function calcBMI({ weigth, heigth }) {
+//   const numericWeigth = Number(weigth.replace(",", "."));
+//   const numericHeigth = Number(heigth.replace(",", "."));
+//   return Number((numericWeigth / numericHeigth ** 2).toFixed(1));
+// }
+
+// // console.log(calcBMI("88.3", "1.75"));
+// console.log(calcBMI({ weigth: "88.3", heigth: "1.75" }));
+// console.log(calcBMI({ weigth: "68.3", heigth: "1.65" }));
+// console.log(calcBMI({ weigth: "188.3", heigth: "1.95" }));
+
+// /**
+//  *
+//  * @param {Object} obj
+//  */
+// function printContactsInfo({ names, phones }) {
+//   const nameList = names.split(",");
+//   const phoneList = phones.split(",");
+//   for (let i = 0; i < nameList.length; i += 1) {
+//     console.log(`${nameList[i]}: ${phoneList[i]}`);
+//   }
+// }
+// printContactsInfo({
+//   names: "Jacobe, William, Solomon, Artemis",
+//   phones: "234525525,225555525,57547574577,4689356222290",
+// });
+
+// function getBotReporter({ companyName, repairBoats, defenceBots }) {
+//   return `${companyName} has ${repairBoats + defenceBots} bots in stock`;
+// }
+
+// console.log(
+//   getBotReporter({
+//     companyName: "Cyberdyne System",
+//     repairBoats: 150,
+//     defenceBots: 50,
+//   })
+// );
+
+// function getStockReport({ companyName, stock }) {
+//   // let total = repairBots + defenceBots;
+//   let total = 0;
+//   for (const value of Object.values(stock)) {
+//     total += value;
+//   }
+//   return `${companyName} has ${total} items in stock`;
+// }
+
+// console.log(
+//   getStockReport({
+//     companyName: "Cyberdyne System",
+//     stock: {
+//       repairBots: 150,
+//       defenceBots: 50,
+//     },
+//   })
+// );
+
+// console.log(
+//   getStockReport({
+//     companyName: "Belacci",
+//     stock: {
+//       shoes: 20,
+//       skirts: 10,
+//       hats: 5,
+//     },
+//   })
+// );
+
+function createContact(partialContact) {
+  return {
+    ...partialContact,
+  };
 }
 
-foo(1, 2, 3, 4, 5);
+console.log(
+  createContact({
+    name: "Mango",
+    email: "mango@mail.com",
+    list: "friend",
+  })
+);
+
+console.log(
+  createContact({
+    name: "Poly",
+    email: "poly@hotmail.com",
+  })
+);
