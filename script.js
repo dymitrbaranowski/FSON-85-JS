@@ -20,16 +20,17 @@
 //     language: "js",
 //     cars: {
 //       audi: "a7",
+//       bmw: "None",
 //     },
 //   },
 // ];
 
-// // for (const {
-// //   name,
-// //   cars: { audi: car },
-// // } of users) {
-// //   console.log(name, car);
-// // }
+// for (const {
+//   name,
+//   cars: { audi: car },
+// } of users) {
+//   console.log(name, car);
+// }
 
 // for (const {
 //   name,
@@ -70,3 +71,54 @@
 //   return newArr;
 // }
 // console.log(getAllPropValue("price"));
+
+// function foo({ name, car: { bmw = "None" } = {} } = {}) {
+//   console.log(name, bmw);
+//   ///
+// }
+// foo({
+//   name: "User1",
+//   language: "html",
+//   car: {
+//     audi: "a6",
+//     bmw: "x5",
+//   },
+// });
+// foo({
+//   name: "User2",
+//   language: "html",
+// });
+// foo({});
+
+// const arr1 = [12, 22, 3, 14, 45, 16, 57];
+// // //spread 12, 22, 3, 14, 45, 16, 57
+// // const min = Math.min(...arr);
+// // console.log(min);
+
+// const arr2 = [...arr1];
+// arr2.splice(0, 1);
+// console.log(arr1);
+// 2;
+
+//Rest------------------------
+
+// const [first, second, ...props] = arr1;
+// console.log(props);
+// console.log(first);
+
+// // for (let prop of props) {
+// //   prop *= first;
+// // }
+// for (let i = 0; i < props.length; i += 1) {
+//   props[i] *= first;
+// }
+// console.log(props);
+
+// const arr1 = [12, 22, 3, 14, 45, 16, 57];
+
+// function foo(first, second, ...rest) {
+//   console.log(arguments);
+//   console.log(first, second, rest);
+// }
+// foo(...arr1);
+// // foo(1, 2, 3, 4, 5, 6);
