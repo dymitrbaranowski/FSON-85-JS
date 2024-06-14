@@ -138,26 +138,89 @@
 //   console.log(`Шановний(а) ${name}, ваш номер буде готовий за 30 хв.`);
 // });
 
-function processCall(recipient, onAvailable, onNotAvailable) {
-  const isRecipientAvailable = Math.random() > 0.5;
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   const isRecipientAvailable = Math.random() > 0.5;
 
-  if (!isRecipientAvailable) {
-    onNotAvailable(recipient);
-    return;
-  }
-  onAvailable(recipient);
-}
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+//   onAvailable(recipient);
+// }
 
-function takeCall(name) {
-  console.log(`З'єдную з ${name}, очікуйте...`);
-}
-function activateAnsweringMachine(name) {
-  console.log(`Абонемент ${name}  недоступний, залиште повідомлення.`);
-}
+// function takeCall(name) {
+//   console.log(`З'єдную з ${name}, очікуйте...`);
+// }
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонемент ${name}  недоступний, залиште повідомлення.`);
+// }
 
-function leaveHoloMessage(name) {
-  console.log(`Абонемент ${name} недоступний, записуємо голограму.`);
-}
+// function leaveHoloMessage(name) {
+//   console.log(`Абонемент ${name} недоступний, записуємо голограму.`);
+// }
 
-processCall("Манго", takeCall, activateAnsweringMachine);
-processCall("Полі", takeCall, leaveHoloMessage);
+// processCall("Манго", takeCall, activateAnsweringMachine);
+// processCall("Полі", takeCall, leaveHoloMessage);
+
+// function printValue(value) {
+//   console.log(value);
+// }
+
+// function prettyPrint(value) {
+//   console.log("Logging value: ", value);
+// }
+
+// function repeat(n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// }
+
+// repeat(3, printValue);
+// repeat(3, prettyPrint);
+
+// Метод forEach---------------------
+
+// масив.forEach(function callback(element, index, array) {
+//   //
+// });
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(`Індекс ${i}, значення ${numbers[i]}`);
+// }
+
+// numbers.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+// Стрілочні функції------------------------
+
+// function classicAdd(a, b, c) {
+//   return a + b + c;
+// }
+
+// const arrowAdd = (a, b, c) => {
+//   return a + b + c;
+// };
+// console.log(classicAdd(1, 2, 3));
+// console.log(arrowAdd(1, 2, 3));
+
+// const fnA = function (message, callback) {
+//   console.log(message);
+
+//   console.log(callback);
+//   callback(100);
+// };
+
+// const fnB = function (number) {
+//   console.log("Это дог при вызове fnB", number);
+// };
+
+// fnA("qweqwe", fnB);
+const doMath = function (a, b, callback) {
+  const result = callback(a, b);
+
+  console.log(result);
+};
