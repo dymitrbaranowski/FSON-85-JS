@@ -122,3 +122,42 @@
 // }
 // foo(...arr1);
 // // foo(1, 2, 3, 4, 5, 6);
+
+// ----Інлайн колбеки-----------------------------------------------
+
+// function registerGuest(name, callback) {
+//   console.log(`Реєструємо гостя ${name}.`);
+//   callback(name);
+// }
+
+// registerGuest("Mango", function great(name) {
+//   console.log(`Ласкаво просимо, ${name}`);
+// });
+
+// registerGuest("Полі", function notify(name) {
+//   console.log(`Шановний(а) ${name}, ваш номер буде готовий за 30 хв.`);
+// });
+
+function processCall(recipient, onAvailable, onNotAvailable) {
+  const isRecipientAvailable = Math.random() > 0.5;
+
+  if (!isRecipientAvailable) {
+    onNotAvailable(recipient);
+    return;
+  }
+  onAvailable(recipient);
+}
+
+function takeCall(name) {
+  console.log(`З'єдную з ${name}, очікуйте...`);
+}
+function activateAnsweringMachine(name) {
+  console.log(`Абонемент ${name}  недоступний, залиште повідомлення.`);
+}
+
+function leaveHoloMessage(name) {
+  console.log(`Абонемент ${name} недоступний, записуємо голограму.`);
+}
+
+processCall("Манго", takeCall, activateAnsweringMachine);
+processCall("Полі", takeCall, leaveHoloMessage);
