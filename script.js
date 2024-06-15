@@ -224,3 +224,9 @@ const doMath = function (a, b, callback) {
 
   console.log(result);
 };
+
+const add = function (x, y) {
+  return x + y;
+};
+
+doMath(2, 3, add);
