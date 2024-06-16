@@ -235,5 +235,10 @@
 
 const buttonRef = document.querySelector(".js-button");
 
-const handleBtnClick = value;
-buttonRef.addEventListener("click");
+console.dir(buttonRef);
+
+const handleBtnClick = function () {
+  console.log("Клик по кнопке");
+};
+
+buttonRef.addEventListener("click", handleBtnClick);
