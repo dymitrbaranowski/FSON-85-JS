@@ -238,7 +238,36 @@ const buttonRef = document.querySelector(".js-button");
 console.dir(buttonRef);
 
 const handleBtnClick = function () {
-  console.log("Клик по кнопке");
+  console.log("Клик по кнопке " + Date.now());
 };
 
 buttonRef.addEventListener("click", handleBtnClick);
+
+// function addEventListener(eventType, callback) {
+//   if (eventType == event) {
+//     callback();
+//   }
+// }
+
+const onGetPositionSuccess = function (position) {
+  console.log("Это вызов onGetPositionSuccess");
+  console.log(position);
+};
+
+const onGetPositionError = function (error) {
+  console.log(error);
+};
+
+// window.navigator.geolocation.getCurrentPosition(
+//   onGetPositionSuccess,
+//   onGetPositionError
+// );
+
+const callback = function () {
+  console.log("Через 2 секунды внутри колбека в таймауте");
+};
+console.log("В коде перед таймаутом");
+
+setTimeout(callback, 2000);
+
+console.log("В коде после таймаута");
