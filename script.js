@@ -233,41 +233,101 @@
 //   return x - y;
 // });
 
-const buttonRef = document.querySelector(".js-button");
+// const buttonRef = document.querySelector(".js-button");
 
-console.dir(buttonRef);
+// console.dir(buttonRef);
 
-const handleBtnClick = function () {
-  console.log("Клик по кнопке " + Date.now());
-};
+// const handleBtnClick = function () {
+//   console.log("Клик по кнопке " + Date.now());
+// };
 
-buttonRef.addEventListener("click", handleBtnClick);
+// buttonRef.addEventListener("click", handleBtnClick);
 
-// function addEventListener(eventType, callback) {
-//   if (eventType == event) {
-//     callback();
-//   }
-// }
+// // function addEventListener(eventType, callback) {
+// //   if (eventType == event) {
+// //     callback();
+// //   }
+// // }
 
-const onGetPositionSuccess = function (position) {
-  console.log("Это вызов onGetPositionSuccess");
-  console.log(position);
-};
+// const onGetPositionSuccess = function (position) {
+//   console.log("Это вызов onGetPositionSuccess");
+//   console.log(position);
+// };
 
-const onGetPositionError = function (error) {
-  console.log(error);
-};
+// const onGetPositionError = function (error) {
+//   console.log(error);
+// };
 
 // window.navigator.geolocation.getCurrentPosition(
 //   onGetPositionSuccess,
 //   onGetPositionError
 // );
 
-const callback = function () {
-  console.log("Через 2 секунды внутри колбека в таймауте");
+// const callback = function () {
+//   console.log("Через 2 секунды внутри колбека в таймауте");
+// };
+// console.log("В коде перед таймаутом");
+
+// setTimeout(callback, 2000);
+
+// console.log("В коде после таймаута");
+
+// const filter = function (array, test) {
+//   const filteredArray = [];
+
+//   for (const el of array) {
+//     console.log(el);
+//     const passed = test(el);
+
+//     if (passed) {
+//       filteredArray.push(el);
+//     }
+//   }
+
+//   return filteredArray;
+// };
+
+// // 1 нада передать функцию
+// // 2. функция получает елемент масива
+// // 3. если елемент массива удовлетворяет условию то функция вернет true
+// // 4. если елемент массива не удовлетворяет условию то функция вернет false
+
+// const callback1 = function (value) {
+//   return value >= 3;
+// };
+
+// const callback2 = function (value) {
+//   return value <= 4;
+// };
+
+// const r1 = filter([1, 2, 3, 4, 5], callback1);
+// console.log(r1);
+
+// const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], callback2);
+// console.log(r2);
+
+// //
+
+// const fruits = [
+//   { name: "apples", quantity: 200, isFresh: true },
+//   { name: "grapes", quantity: 150, isFresh: false },
+//   { name: "bananas", quantity: 100, isFresh: true },
+// ];
+
+// const getFruitsWithQuantity = function (fruit) {
+//   return fruit.quantity >= 120;
+// };
+
+// const r3 = filter(fruits, getFruitsWithQuantity);
+// console.log(r3);
+
+const fnA = function (parameter) {
+  const innerVariable = "Значение внутренней переменной функции fnA";
+  const innerFunction = function () {
+    console.log("Это вызов innerFunction");
+  };
 };
-console.log("В коде перед таймаутом");
 
-setTimeout(callback, 2000);
-
-console.log("В коде после таймаута");
+const makeDish = function (shefName, dish) {
+  console.log(`${shefName} готовит ${dish}`);
+};
