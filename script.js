@@ -122,3 +122,38 @@
 // }
 // foo(...arr1);
 // // foo(1, 2, 3, 4, 5, 6);
+
+const filter = function (array, test) {
+  const filteredArray = [];
+
+  for (const el of array) {
+    console.log(el);
+    const passed = test(el);
+
+    if (passed) {
+      filteredArray.push(el);
+    }
+  }
+
+  return filteredArray;
+};
+
+// 1.надо передать функцию
+// 2.функция получает ел масива
+// 3.если ел масива удовлетворяет условию, то функция вернет true
+// 3.если ел масива не удовлетворяет условию, то функция вернет false
+
+const callback1 = function (value) {
+  return value >= 3;
+};
+const callback2 = function (value) {
+  return value <= 4;
+};
+
+const r1 = filter([1, 2, 3, 4, 5], callback1);
+console.log(r1);
+const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], callback2);
+console.log(r2);
+
+// console.log(filter([1, 2, 3, 4, 5]));
+// console.log(filter([1, 2, 3, 4, 5, 6, 7, 8]));
