@@ -287,10 +287,10 @@
 //   return filteredArray;
 // };
 
-// // 1 нада передать функцию
-// // 2. функция получает елемент масива
-// // 3. если елемент массива удовлетворяет условию то функция вернет true
-// // 4. если елемент массива не удовлетворяет условию то функция вернет false
+// 1 нада передать функцию
+// 2. функция получает елемент масива
+// 3. если елемент массива удовлетворяет условию то функция вернет true
+// 4. если елемент массива не удовлетворяет условию то функция вернет false
 
 // const callback1 = function (value) {
 //   return value >= 3;
@@ -326,8 +326,72 @@ const fnA = function (parameter) {
   const innerFunction = function () {
     console.log("Это вызов innerFunction");
   };
+  return innerFunction;
 };
+
+// const fnB = fnA(555);
+
+// fnB();
+
+// console.log(fnB);
 
 const makeDish = function (shefName, dish) {
   console.log(`${shefName} готовит ${dish}`);
 };
+
+// makeDish("Mango", "котлеты");
+// makeDish("Mango", "омлет");
+// makeDish("Mango", "чай");
+
+// makeDish("Poly", "котлеты");
+// makeDish("Poly", "супик");
+// makeDish("Poly", "кофе");
+
+// const makeSheff = function (name) {
+//   const makeDish = function (dish) {
+//     console.log(`${name} готовит ${dish}`);
+//   };
+//   return makeDish;
+// };
+
+// const mango = makeSheff("Mango");
+// console.dir(mango);
+
+// mango("котлеты");
+// mango("пирожок");
+
+// const poly = makeSheff("Poly");
+// console.dir(poly);
+// poly("чай");
+// poly("омлет");
+// const floatingPoint = 3.456789;
+// const someInt = Math.round(floatingPoint);
+// const withDecimals = Number(floatingPoint.toFixed(2));
+
+// const rounder = function (number, places) {
+//   return Number(number.toFixed(places));
+// };
+
+// console.log(rounder(3.734348848, 2));
+// console.log(rounder(3.734348848, 3));
+// console.log(rounder(5.3935, 2));
+// console.log(rounder(5.3935, 3));
+
+const rounder = function (places) {
+  return function (number) {
+    return Number(number.toFixed(places));
+  };
+};
+
+const rounder2 = rounder(2);
+const rounder3 = rounder(3);
+
+console.log(rounder2(3.734348848));
+console.log(rounder3(3.734348848));
+console.log(rounder2(5.3935));
+console.log(rounder3(5.3935));
+
+// const number1 = 3.6675;
+// const number2 = 4.3387;
+// console.log(Number(number1.toFixed(3)));
+// console.log(Number(number2.toFixed(4)));
