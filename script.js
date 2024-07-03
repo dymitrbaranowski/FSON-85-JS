@@ -377,19 +377,19 @@ const makeDish = function (shefName, dish) {
 // console.log(rounder(5.3935, 2));
 // console.log(rounder(5.3935, 3));
 
-const rounder = function (places) {
-  return function (number) {
-    return Number(number.toFixed(places));
-  };
-};
+// const rounder = function (places) {
+//   return function (number) {
+//     return Number(number.toFixed(places));
+//   };
+// };
 
-const rounder2 = rounder(2);
-const rounder3 = rounder(3);
+// const rounder2 = rounder(2);
+// const rounder3 = rounder(3);
 
-console.log(rounder2(3.734348848));
-console.log(rounder3(3.734348848));
-console.log(rounder2(5.3935));
-console.log(rounder3(5.3935));
+// console.log(rounder2(3.734348848));
+// console.log(rounder3(3.734348848));
+// console.log(rounder2(5.3935));
+// console.log(rounder3(5.3935));
 
 // const number1 = 3.6675;
 // const number2 = 4.3387;
