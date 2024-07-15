@@ -411,17 +411,30 @@
 // console.log(add(5, 10, 15));
 // console.log(addArrow(5, 10, 15));
 
-const fnA = function () {
-  return {
-    a: 5,
-  };
+// const fnA = function () {
+//   return {
+//     a: 5,
+//   };
+// };
+
+// console.log(fnA());
+
+// const arrowFnA = () => ({
+//   arrowA: 5,
+// });
+// console.log(arrowFnA());
+
+const onGetPositionSuccess = (position) => {
+  console.log("Это вызов  onGetPositionSuccess");
+  console.log(position);
 };
 
-console.log(fnA());
-
-const arrowFnA = () => {
-  return {
-    arrowA: 5,
-  };
+const onGetPositionError = (error) => {
+  console.log("Это вызов  onGetPositionError");
+  console.log(error);
 };
-console.log(arrowFnA());
+
+window.navigator.geolocation.getCurrentPosition(
+  onGetPositionSuccess,
+  onGetPositionError
+);
