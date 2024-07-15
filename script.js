@@ -321,13 +321,13 @@
 // const r3 = filter(fruits, getFruitsWithQuantity);
 // console.log(r3);
 
-const fnA = function (parameter) {
-  const innerVariable = "Значение внутренней переменной функции fnA";
-  const innerFunction = function () {
-    console.log("Это вызов innerFunction");
-  };
-  return innerFunction;
-};
+// const fnA = function (parameter) {
+//   const innerVariable = "Значение внутренней переменной функции fnA";
+//   const innerFunction = function () {
+//     console.log("Это вызов innerFunction");
+//   };
+//   return innerFunction;
+// };
 
 // const fnB = fnA(555);
 
@@ -335,9 +335,9 @@ const fnA = function (parameter) {
 
 // console.log(fnB);
 
-const makeDish = function (shefName, dish) {
-  console.log(`${shefName} готовит ${dish}`);
-};
+// const makeDish = function (shefName, dish) {
+//   console.log(`${shefName} готовит ${dish}`);
+// };
 
 // makeDish("Mango", "котлеты");
 // makeDish("Mango", "омлет");
@@ -395,3 +395,33 @@ const makeDish = function (shefName, dish) {
 // const number2 = 4.3387;
 // console.log(Number(number1.toFixed(3)));
 // console.log(Number(number2.toFixed(4)));
+
+// const add = function (a, b, c) {
+//   // console.log(a, b, c);
+//   console.log(arguments);
+//   return a + b + c;
+// };
+
+// const addArrow = (...args) => {
+//   // console.log(a, b, c);
+//   console.log(args);
+//   // return a + b + c;
+// };
+
+// console.log(add(5, 10, 15));
+// console.log(addArrow(5, 10, 15));
+
+const fnA = function () {
+  return {
+    a: 5,
+  };
+};
+
+console.log(fnA());
+
+const arrowFnA = () => {
+  return {
+    arrowA: 5,
+  };
+};
+console.log(arrowFnA());
