@@ -292,21 +292,15 @@
 // 3. если елемент массива удовлетворяет условию то функция вернет true
 // 4. если елемент массива не удовлетворяет условию то функция вернет false
 
-// const callback1 = function (value) {
-//   return value >= 3;
-// };
+// const callback1 = (value) => value >= 3;
 
-// const callback2 = function (value) {
-//   return value <= 4;
-// };
+// const callback2 = (value) => value <= 4;
 
-// const r1 = filter([1, 2, 3, 4, 5], callback1);
+// const r1 = filter([1, 2, 3, 4, 5], (value) => value >= 3);
 // console.log(r1);
 
-// const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], callback2);
+// const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], (value) => value <= 4);
 // console.log(r2);
-
-// //
 
 // const fruits = [
 //   { name: "apples", quantity: 200, isFresh: true },
@@ -314,11 +308,9 @@
 //   { name: "bananas", quantity: 100, isFresh: true },
 // ];
 
-// const getFruitsWithQuantity = function (fruit) {
-//   return fruit.quantity >= 120;
-// };
+// // const getFruitsWithQuantity = (fruit) => fruit.quantity >= 120;
 
-// const r3 = filter(fruits, getFruitsWithQuantity);
+// const r3 = filter(fruits, (fruit) => fruit.quantity >= 120);
 // console.log(r3);
 
 // const fnA = function (parameter) {
@@ -424,17 +416,17 @@
 // });
 // console.log(arrowFnA());
 
-const onGetPositionSuccess = (position) => {
-  console.log("Это вызов  onGetPositionSuccess");
-  console.log(position);
-};
+// const onGetPositionSuccess = (position) => {
+//   console.log("Это вызов  onGetPositionSuccess");
+//   console.log(position);
+// };
 
-const onGetPositionError = (error) => {
-  console.log("Это вызов  onGetPositionError");
-  console.log(error);
-};
+// const onGetPositionError = (error) => {
+//   console.log("Это вызов  onGetPositionError");
+//   console.log(error);
+// };
 
-window.navigator.geolocation.getCurrentPosition(
-  onGetPositionSuccess,
-  onGetPositionError
-);
+// window.navigator.geolocation.getCurrentPosition(
+//   onGetPositionSuccess,
+//   onGetPositionError
+// );
