@@ -430,3 +430,30 @@
 //   onGetPositionSuccess,
 //   onGetPositionError
 // );
+
+// const showThis = () => {
+//   console.log("this in showThis: ", this);
+// };
+
+// showThis();
+
+// const user = { name: "Mango" };
+// user.showContext = showThis;
+
+// user.showContext();
+
+const user = {
+  fullName: "Mango",
+  showName() {
+    console.log("this: ", this);
+    console.log("this.fuulName: ", this.fullName);
+
+    const inner = () => {
+      console.log("this in inner: ", this);
+    };
+
+    inner();
+  },
+};
+
+user.showName();
