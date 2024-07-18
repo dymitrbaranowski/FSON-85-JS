@@ -442,18 +442,35 @@
 
 // user.showContext();
 
-const user = {
-  fullName: "Mango",
-  showName() {
-    console.log("this: ", this);
-    console.log("this.fuulName: ", this.fullName);
+// const user = {
+//   fullName: "Mango",
+//   showName: () => {
+//     console.log("this: ", this);
+//     console.log("this.fuulName: ", this.fullName);
+//   },
+// };
 
-    const inner = () => {
-      console.log("this in inner: ", this);
-    };
+// // const boundShowName = user.showName.bind(user);
 
-    inner();
-  },
+// user.showName();
+
+// const User = (name) => {
+//   this.name = name;
+// };
+
+// console.log(new User("Mango"));
+
+//Анонімна стрілочна функція-----------------
+// const numbers = [5, 10, 15, 20, 25];
+
+// numbers.forEach((number, index) => {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+const numbers = [5, 10, 15, 20, 25];
+
+const logMassage = (number, index) => {
+  console.log(`Індекс ${index}, значення ${number}`);
 };
 
-user.showName();
+numbers.forEach(logMassage);
