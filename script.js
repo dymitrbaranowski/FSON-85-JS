@@ -17,7 +17,7 @@
 
 // objA.showX();
 
-const numbers = [1, 5, 2, 4, 3];
+// const numbers = [1, 5, 2, 4, 3];
 
 // const greaterThenTwo = numbers.filter(function (num) {
 //   return num > 2;
@@ -42,3 +42,32 @@ const numbers = [1, 5, 2, 4, 3];
 // );
 
 // console.table(updatedPlayers);
+
+const numbers = [5, 10, 15, 20, 25];
+
+// numbers.forEach(function (number) {
+//   console.log("number", number);
+// });
+
+// console.log(numbers);
+
+// const doubledNums = numbers.map((number) => {
+//   console.log(number);
+// });
+// console.log("numbers", numbers);
+// console.log("doubledNums", doubledNums);
+
+const players = [
+  { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+  { id: "player-2", name: "Poly", timePlayed: 410, points: 54, online: true },
+  { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
+  { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
+  { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
+];
+
+const playerNames = players.map((player) => {
+  console.log(player);
+
+  return player.name;
+});
+console.log("playerNames", playerNames);
