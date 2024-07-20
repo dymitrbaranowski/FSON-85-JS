@@ -23,14 +23,22 @@ const numbers = [1, 5, 2, 4, 3];
 //   return num > 2;
 // });
 
-const greaterThenTwo = numbers.filter((num) => num > 2);
+// const greaterThenTwo = numbers.filter((num) => num > 2);
 
-console.log(greaterThenTwo);
+// console.log(greaterThenTwo);
 
-const multyByTwo = greaterThenTwo.map((num) => num * 3);
+// const multyByTwo = greaterThenTwo.map((num) => num * 3);
 
-console.log(multyByTwo);
+// console.log(multyByTwo);
 
-const sorted = multyByTwo.sort((a, b) => a - b);
+// const sorted = multyByTwo.sort((a, b) => a - b);
 
-console.log(sorted);
+// console.log(sorted);
+
+// const updatedPlayers = players.map((player) =>
+//   player.id === playerIdToUpdate
+//     ? { ...player, timePlayed: player.timePlayed + 50 }
+//     : player
+// );
+
+// console.table(updatedPlayers);
