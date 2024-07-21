@@ -65,9 +65,15 @@ const players = [
   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
 ];
 
-const playerNames = players.map((player) => {
-  console.log(player);
-
-  return player.name;
-});
+const playerNames = players.map((player) => player.name);
 console.log("playerNames", playerNames);
+
+const playerIds = players.map((player) => player.id);
+console.log("playerIds", playerIds);
+
+// const res = players.map(({ name, online }) => ({ name, online }));
+
+// console.log("res", res);
+const updatedPlayers = players.map((player) => {
+  console.log(player);
+});
