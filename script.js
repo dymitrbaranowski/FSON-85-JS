@@ -77,21 +77,42 @@
 // const updatedPlayers = players.map((player) => {
 //   console.log(player);
 // });
+
+// const filteredNumbers = numbers.filter((number) => number < 10 || number > 20);
+
+// console.log(filteredNumbers);
+// console.log("numbers", numbers);
+
+// const onlinePlayer = players.filter((player) => player.online);
+// console.table(onlinePlayer);
+
+// const offlinePlayer = players.filter((player) => !player.online);
+// console.table(offlinePlayer);
+
+// const hardcorePlayers = players.filter((player) => player.timePlayed > 2500);
+
+// console.log(hardcorePlayers);
+
 const numbers = [5, 10, 15, 20, 25];
+
+const number = numbers.find((number) => number === 10);
+
+console.log(number);
 
 const players = [
   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
   { id: "player-2", name: "Poly", timePlayed: 410, points: 54, online: true },
   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
   { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
-  { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
+  { id: "player-5", name: "Chelsy", timePlayed: 280, points: 54, online: true },
 ];
 
-const filteredNumbers = numbers.filter((number) => {
-  console.log(number);
+const playerIdToFind = "player-3";
 
-  return number < 15;
-});
+const playerWithId = players.find(({ id }) => id === playerIdToFind);
+console.log(playerWithId);
 
-console.log(filteredNumbers);
-console.log("numbers", numbers);
+const playerNameToFind = "Poly";
+const playerWithName = players.find(({ name }) => name === playerNameToFind);
+
+console.log(playerWithName);
