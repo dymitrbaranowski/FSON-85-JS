@@ -93,26 +93,93 @@
 
 // console.log(hardcorePlayers);
 
-const numbers = [5, 10, 15, 20, 25];
+// const playerIdToFind = "player-3";
 
-const number = numbers.find((number) => number === 10);
+// const playerWithId = players.find(({ id }) => id === playerIdToFind);
+// console.log(playerWithId);
 
-console.log(number);
+// const playerNameToFind = "Poly";
+// const playerWithName = players.find(({ name }) => name === playerNameToFind);
+
+// console.log(playerWithName);
+
+// const number = numbers.find((number) => number === 10);
+
+// console.log(number);
+
+// const isAllOnline = players.every((player) => player.timePlayed > 250);
+// // console.log("isAllOnline: ", isAllOnline);
+
+// const isAnyOnline = players.some(({ online }) => online);
+// console.log("isAnyOnline: ", isAnyOnline);
+
+// const anyHardcorePlayers = players.some((player) => player.timePlayed > 400);
+// console.log("anyHardcorePlayers: ", anyHardcorePlayers);
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const total = numbers.reduce((acc, number) => {
+//   console.log("number", number);
+//   console.log("acc", acc);
+
+//   return acc + number;
+// }, 0);
+// console.log(total);
+
+const salary = {
+  mango: 100,
+  poly: 50,
+  ajax: 150,
+};
+
+const totalSalary = Object.values(salary).reduce(
+  (total, value) => total + value,
+  0
+);
+
+// console.log(totalSalary);
 
 const players = [
   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
-  { id: "player-2", name: "Poly", timePlayed: 410, points: 54, online: true },
+  { id: "player-2", name: "Poly", timePlayed: 470, points: 54, online: true },
   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
   { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
-  { id: "player-5", name: "Chelsy", timePlayed: 280, points: 54, online: true },
+  { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
 ];
 
-const playerIdToFind = "player-3";
+const totalTimePlayed = players.reduce(
+  (totalTime, { timePlayed }) => totalTime + timePlayed,
+  0
+);
+// console.log(totalTimePlayed);
 
-const playerWithId = players.find(({ id }) => id === playerIdToFind);
-console.log(playerWithId);
+const cart = [
+  { lable: "Apples", price: 100, quantity: 2 },
+  { lable: "Bananas", price: 120, quantity: 3 },
+  { lable: "Lemons", price: 70, quantity: 4 },
+];
+const totalAmount = cart.reduce(
+  (total, { price, quantity }) => total + price * quantity,
+  0
+);
+// console.log(totalAmount);
 
-const playerNameToFind = "Poly";
-const playerWithName = players.find(({ name }) => name === playerNameToFind);
+// const getInactiveUsers = (array) => array.filter(({ isActive }) => !isActive);
 
-console.log(playerWithName);
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+const allTags = tweets.reduce((tags, tweet) => {
+  tags.push(...tweet.tags);
+
+  // tags.push("tweet", "css");
+  // tags.push("html", "js", "nodejs");
+
+  return tags;
+}, []);
+console.log(allTags);
