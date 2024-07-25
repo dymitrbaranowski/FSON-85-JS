@@ -174,12 +174,5 @@ const tweets = [
   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
 ];
 
-const allTags = tweets.reduce((tags, tweet) => {
-  tags.push(...tweet.tags);
-
-  // tags.push("tweet", "css");
-  // tags.push("html", "js", "nodejs");
-
-  return tags;
-}, []);
+const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
 console.log(allTags);
