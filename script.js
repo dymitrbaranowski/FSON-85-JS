@@ -139,19 +139,19 @@
 
 // console.log(totalSalary);
 
-// const players = [
-//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
-//   { id: "player-2", name: "Poly", timePlayed: 470, points: 54, online: true },
-//   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
-//   { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
-//   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
-// ];
+const players = [
+  { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+  { id: "player-2", name: "Poly", timePlayed: 470, points: 54, online: true },
+  { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
+  { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
+  { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
+];
 
 // const totalTimePlayed = players.reduce(
 //   (totalTime, { timePlayed }) => totalTime + timePlayed,
 //   0
 // );
-// // console.log(totalTimePlayed);
+// console.log(totalTimePlayed);
 
 // const cart = [
 //   { lable: "Apples", price: 100, quantity: 2 },
@@ -166,90 +166,8 @@
 
 // const getInactiveUsers = (array) => array.filter(({ isActive }) => !isActive);
 
-// const tweets = [
-//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
-//   { id: "001", likes: 2, tags: ["html", "css"] },
-//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-//   { id: "003", likes: 8, tags: ["css", "react"] },
-//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-// ];
-
-// const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
-// console.log(allTags);
-
-// const tagsStar = allTags.reduce((acc, tag) => {
-//   console.log(acc);
-//   if (acc[tag]) {
-//     acc[tag] += 1;
-
-//     return acc;
-//   }
-
-//   acc[tag] = 1;
-//   return acc;
-// }, {});
-// console.log(tagsStar);
-
-// const tagsStar = allTags.reduce(
-//   (acc, tag) => ({
-//     ...acc,
-//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
-//   }),
-//   {}
-// );
-// console.log(tagsStar);
-
-// const user = {
-//   name: "Mango",
-// };
-
-// const key = "name";
-// console.log(user[key]);
-
-const numbers = [1, 9, 6, 2, 3];
-
-// numbers.sort();
-console.log("numbers", numbers);
-
-const letters = ["b", "B", "a", "A"];
-
-// letters.sort();
-// // console.log("letters", letters);
-
-// numbers.sort((curEl, nextEl) => {
-//   return nextEl - curEl;
-// });
-
-const players = [
-  { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
-  { id: "player-2", name: "Poly", timePlayed: 470, points: 54, online: true },
-  { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
-  { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
-  { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
-];
-
-// console.log(numbers);
-const deskSortedNumbers = [...numbers].sort((a, b) => b - a);
-const askSortedNumbers = [...numbers].sort((a, b) => a - b);
-
-console.log("deskSortedNumbers", deskSortedNumbers);
-console.log("askSortedNumbers", askSortedNumbers);
-console.log("numbers", numbers);
-
-console.log([1, 2, 3, 4, 5].reverse());
-
-const sortByBestPlayers = [...players].sort(
-  (prevPlayer, nextPlayer) => nextPlayer.timePlayed - prevPlayer.timePlayed
-);
-
-console.table(sortByBestPlayers);
-
-const sortedByWorstPlayers = [...players].sort(
-  (prevPlayer, nextPlayer) => prevPlayer.timePlayed - nextPlayer.timePlayed
-);
-console.table(sortedByWorstPlayers);
-
 const byName = [...players].sort((a, b) => {
+  console.log(a.name.charCodeAt(0));
   const result = a.name[0] > b.name[0];
 
   if (result) {
@@ -259,6 +177,7 @@ const byName = [...players].sort((a, b) => {
   if (!result) {
     return -1;
   }
-  // return a.name[0] - b.name[0];
 });
 console.table(byName);
+
+console.log("abc".charCodeAt(2));
