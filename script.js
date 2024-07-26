@@ -139,13 +139,13 @@
 
 // console.log(totalSalary);
 
-// const players = [
-//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
-//   { id: "player-2", name: "Poly", timePlayed: 470, points: 54, online: true },
-//   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
-//   { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
-//   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
-// ];
+const players = [
+  { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+  { id: "player-2", name: "Poly", timePlayed: 470, points: 54, online: true },
+  { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
+  { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
+  { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
+];
 
 // const totalTimePlayed = players.reduce(
 //   (totalTime, { timePlayed }) => totalTime + timePlayed,
@@ -165,3 +165,19 @@
 // console.log(totalAmount);
 
 // const getInactiveUsers = (array) => array.filter(({ isActive }) => !isActive);
+
+const byName = [...players].sort((a, b) => {
+  console.log(a.name.charCodeAt(0));
+  const result = a.name[0] > b.name[0];
+
+  if (result) {
+    return 1;
+  }
+
+  if (!result) {
+    return -1;
+  }
+});
+console.table(byName);
+
+console.log("abc".charCodeAt(2));
