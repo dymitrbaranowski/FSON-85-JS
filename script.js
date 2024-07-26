@@ -166,6 +166,7 @@ const totalAmount = cart.reduce(
 
 // const getInactiveUsers = (array) => array.filter(({ isActive }) => !isActive);
 
+<<<<<<< Updated upstream
 const tweets = [
   { id: "000", likes: 5, tags: ["js", "nodejs"] },
   { id: "001", likes: 2, tags: ["html", "css"] },
@@ -176,3 +177,10 @@ const tweets = [
 
 const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
 console.log(allTags);
+=======
+// console.log("res", res);
+const updatedPlayers = players.map((player) => {
+  console.log(player);
+});
+
+>>>>>>> Stashed changes
