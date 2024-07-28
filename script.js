@@ -143,17 +143,23 @@ const filter = function (array, test) {
 // 3.если ел масива удовлетворяет условию, то функция вернет true
 // 3.если ел масива не удовлетворяет условию, то функция вернет false
 
-const callback1 = function (value) {
-  return value >= 3;
-};
-const callback2 = function (value) {
-  return value <= 4;
-};
-
-const r1 = filter([1, 2, 3, 4, 5], callback1);
-console.log(r1);
-const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], callback2);
-console.log(r2);
-
 // console.log(filter([1, 2, 3, 4, 5]));
 // console.log(filter([1, 2, 3, 4, 5, 6, 7, 8]));
+
+const players = [
+  { id: "player-1", name: "Mango", timePlayed: 310, online: false },
+  { id: "player-2", name: "POly", timePlayed: 470, online: true },
+  { id: "player-3", name: "Kiwi", timePlayed: 230, online: true },
+  { id: "player-4", name: "Ajax", timePlayed: 150, online: false },
+  { id: "player-5", name: "Chelsey", timePlayed: 80, online: true },
+];
+
+const sortedByBestPlayers = [...players].sort((prevPlayer, nextPlayer) => {
+  return nextPlayer.timePlayed - prevPlayer.timePlayed;
+});
+console.table(sortedByBestPlayers);
+
+const sortedWorstPlayer = [...players].sort((prevPlayer, nextPlayer) => {
+  return prevPlayer.timePlayed - nextPlayer.timePlayed;
+});
+console.table(sortedWorstPlayer);
