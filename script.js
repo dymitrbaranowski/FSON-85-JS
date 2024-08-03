@@ -206,7 +206,7 @@ const tweets = [
 //   };
 // }, {});
 
-const tags = tweets.map((t) => t.tags).flat();
+// const tags = tweets.map((t) => t.tags).flat();
 
-const tags  tweets
+const tags = tweets.flatMap((t) => t.tags);
 console.log(tags);
