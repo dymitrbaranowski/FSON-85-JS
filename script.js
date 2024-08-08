@@ -182,16 +182,16 @@ const players = [
 
 // console.log("abc".charCodeAt(2));
 
-const array = [1, 2, [4, [5]], [6, [7, 8, [9]]]];
-console.log(array);
+// const array = [1, 2, [4, [5]], [6, [7, 8, [9]]]];
+// console.log(array);
 
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
 // console.log(array.flat(3));
 // // const tags = tweets.map((t) => t.tags).flat();
 // const tags = tweets.flatMap((t) => t.tags);
@@ -208,5 +208,20 @@ const tweets = [
 
 // const tags = tweets.map((t) => t.tags).flat();
 
-const tags = tweets.flatMap((t) => t.tags);
-console.log(tags);
+// const tags = tweets.flatMap((t) => t.tags);
+// console.log(tags);
+
+const numbers = [1, 5, 2, 4, 3];
+
+const greaterThenTwo = numbers.filter(function (num) {
+  return num > 2;
+});
+console.log(greaterThenTwo);
+
+const multByThree = greaterThenTwo.map(function (num) {
+  return num * 3;
+});
+console.log(multByThree);
+
+const sorted = multByThree.sort((a, b) => a - b);
+console.log(sorted);
