@@ -223,5 +223,11 @@ const multByThree = greaterThenTwo.map(function (num) {
 });
 console.log(multByThree);
 
-const sorted = multByThree.sort((a, b) => a - b);
-console.log(sorted);
+// const sorted = multByThree.sort((a, b) => a - b);
+// console.log(sorted);
+
+// const sorted = numbers
+//   .filter((num) => num > 2)
+//   .map((num) => num * 3)
+//   .sort((a, b) => a - b);
+// console.log(sorted);
