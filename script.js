@@ -298,13 +298,13 @@
 // element.toggleHovered().changeClass("open");
 // console.log(element);
 
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
 // console.log(array.flat(3));
 // const tags = tweets.map((t) => t.tags).flat();
 // const tags = tweets.flatMap((t) => t.tags);
@@ -321,16 +321,64 @@ const tweets = [
 
 // const tags = tweets.map((t) => t.tags).flat();
 
-const tags = tweets
-  .flatMap((t) => t.tags)
-  .reduce(
-    (acc, tag) => ({
-      ...acc,
-      [tag]: acc[tag] ? acc[tag] + 1 : 1,
-    }),
-    {}
-  );
-console.log(tags);
+// const tags = tweets
+//   .flatMap((t) => t.tags)
+//   .reduce(
+//     (acc, tag) => ({
+//       ...acc,
+//       [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//     }),
+//     {}
+//   );
+// console.log(tags);
 
-console.log(_.isEmpty({}));
-console.log(_.isEmpty({ a: 1 }));
+// console.log(_.isEmpty({}));
+// console.log(_.isEmpty({ a: 1 }));
+
+// const user = {
+//   name: "mango",
+// };
+
+// console.log(_.get(user, "location.city"));
+// console.log(user.location.city);
+
+// if (user && user.location && user.location.city) {
+//   console.log(user.location.city);
+// }
+
+// console.log(user?.location?.city);
+
+// Union()-----------
+
+// console.log(_.union([1, 2, 3], [3, 4, 5]));
+//range()-----------------
+
+// console.log(_.range(10, 51));
+
+//sortBy()--------
+
+// const users = [
+//   { user: "fred", age: 48 },
+//   { user: "barney", age: 36 },
+//   { user: "fred", age: 40 },
+//   { user: "barney", age: 34 },
+// ];
+// console.log(_.sortBy(users, ["user", "age"]));
+
+// sumBu()------------
+
+// console.log(_.sum([1, 2, 3, 4, 5]));
+
+// const players = [
+//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+//   { id: "player-2", name: "Poly", timePlayed: 410, points: 54, online: true },
+//   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 54, online: true },
+//   { id: "player-4", name: "Ajax", timePlayed: 150, points: 54, online: false },
+//   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 54, online: true },
+// ];
+
+// console.log(_.sumBy(players, (player) => player.timePlayed));
+
+// console.log(Math.min(...[1, 2, 3, 4, 5]));
+
+// console.log(_.minBy(players, (player) => player.timePlayed).name);
