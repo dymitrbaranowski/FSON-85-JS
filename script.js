@@ -620,3 +620,127 @@ const users = [
 
 // const eachElementInThirdIsOdd = thirdArray.every((value) => value % 2 !== 0);
 // console.log(eachElementInThirdIsOdd);
+
+// const isEveryUserActive = (users) => {
+//   return users.every((value) => value.isActive);
+// };
+
+// console.log(isEveryUserActive(users));
+
+// Some()---------------------
+// console.log([1, 2, 3, 4, 5].some((value) => value >= 0));
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const anyElementInFirstIsEven = firstArray.some((value) => value % 2 === 0);
+// console.log(anyElementInFirstIsEven);
+
+// const anyElementInFirstIsOdd = firstArray.some((value) => value % 2 !== 0);
+// console.log(anyElementInFirstIsOdd);
+
+// const anyElementInSecondIsEven = secondArray.some((value) => value % 2 === 0);
+// console.log(anyElementInSecondIsEven);
+
+// const anyElementInSecondIsOdd = secondArray.some((value) => value % 2 !== 0);
+// console.log(anyElementInSecondIsOdd);
+
+// const anyElementInThirdIsEven = thirdArray.some((value) => value % 2 === 0);
+// console.log(anyElementInThirdIsEven);
+
+// const anyElementInThirdIsOdd = thirdArray.some((value) => value % 2 !== 0);
+// console.log(anyElementInThirdIsOdd);
+
+// const isAnyUserActive = (users) => {
+//   return users.some((active) => active.isActive);
+// };
+// console.log(isAnyUserActive(users));
+
+// const total = [2, 7, 3, 14, 6].reduce((previosValue, number) => {
+//   return previosValue + number;
+// }, 0);
+
+// console.log(total);
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playTimes = Object.values(players);
+
+// const totalPlayTime = playTimes.reduce((previosValue, number) => {
+//   return previosValue + number;
+// });
+
+// const averagePlayTime = totalPlayTime / playTimes.length;
+
+// console.log(averagePlayTime);
+
+// const students = [
+//   { name: "Mango", score: 83 },
+//   { name: "Poly", score: 59 },
+//   { name: "Ajax", score: 37 },
+//   { name: "Kiwi", score: 94 },
+//   { name: "Houston", score: 64 },
+// ];
+
+// const totalScore = students.reduce((total, student) => {
+//   return total + student.score;
+// }, 0);
+
+// const averageScore = totalScore / students.length;
+// console.log(averageScore);
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce((spendTime, player) => {
+//   return spendTime + player.playtime / player.gamesPlayed;
+// }, 0);
+
+// console.log(totalAveragePlaytimePerGame);
+
+// const calculateTotalBalance = (users) => {
+//   return users.reduce((totalBalance, bal) => totalBalance + bal.balance, 0);
+// };
+// console.log(calculateTotalBalance(users));
+
+// const getTotalFriendCount = (users) => {
+//   return users.reduce((totalFriends, user) => {
+//     return totalFriends + user.friends.length;
+//   }, 0);
+// };
+
+// console.log(getTotalFriendCount(users));
+
+//Sort()--------------
+
+// const scores = [61, 19, 74, 92, 56];
+// scores.sort();
+// console.log(scores);
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = [...scores].sort();
+// console.log(scores);
+// console.log(ascendingScores);
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+// console.log(ascendingReleaseDates);
+
+// const alphabeticalAuthors = [...authors].sort();
+// console.log(alphabeticalAuthors);
