@@ -546,12 +546,77 @@ const users = [
 //   return uniqueFriend;
 // };
 
-const getFriends = (users) => {
-  const allFriend = users.flatMap((user) => user.friends);
-  const uniqueFriend = allFriend.filter(
-    (friend, index, array) => array.indexOf(friend) === index
-  );
-  return uniqueFriend;
-};
+// const getFriends = (users) => {
+//   const allFriend = users.flatMap((user) => user.friends);
+//   const uniqueFriend = allFriend.filter(
+//     (friend, index, array) => array.indexOf(friend) === index
+//   );
+//   return uniqueFriend;
+// };
 
-console.log(getFriends(users));
+// console.log(getFriends(users));
+
+// const getActiveUsers = (users) => {
+//   return users.filter((user) => user.isActive);
+// };
+
+// console.log(getActiveUsers(users));
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+// ];
+
+// const BOOK_TITLE = "The Dream of a Ridiculous Man";
+// const AUTHOR = "Robert Sheckley";
+
+// const bookWithTitle = books.find((tit) => tit.title === BOOK_TITLE);
+// const bookByAuthor = books.find((tit) => tit.author === AUTHOR);
+
+// console.log(bookByAuthor);
+// console.log(bookWithTitle);
+
+// const getUserWithEmail = (users, email) => {
+//   return users.find((user) => user.email === email);
+// };
+// console.log(getUserWithEmail(users, "elmahead@omatom.com"));
+
+// console.log([1, 2, 3, 4, 5].every((value) => value >= 0));
+
+// Every()-----------------
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const eachElementInFirstIsEven = firstArray.every((value) => value % 2 === 0);
+// console.log(eachElementInFirstIsEven);
+
+// const eachElementInFirstIsOdd = firstArray.every((value) => value % 2 !== 0);
+// console.log(eachElementInFirstIsOdd);
+
+// const eachElementInSecondIsEven = secondArray.every((value) => value % 2 === 0);
+// console.log(eachElementInSecondIsEven);
+
+// const eachElementInSecondIsOdd = secondArray.every((value) => value % 2 !== 0);
+// console.log(eachElementInSecondIsOdd);
+
+// const eachElementInThirdIsEven = thirdArray.every((value) => value % 2 === 0);
+// console.log(eachElementInThirdIsEven);
+
+// const eachElementInThirdIsOdd = thirdArray.every((value) => value % 2 !== 0);
+// console.log(eachElementInThirdIsOdd);
