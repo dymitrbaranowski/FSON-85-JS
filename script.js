@@ -868,12 +868,12 @@ const users = [
 
 // console.log(sortByName(users));
 
-const students = [
-  { name: "Mango", score: 83, courses: ["mathematics", "physics"] },
-  { name: "Poly", score: 59, courses: ["science", "mathematics"] },
-  { name: "Ajax", score: 37, courses: ["physics", "biology"] },
-  { name: "Kiwi", score: 94, courses: ["literature", "science"] },
-];
+// const students = [
+//   { name: "Mango", score: 83, courses: ["mathematics", "physics"] },
+//   { name: "Poly", score: 59, courses: ["science", "mathematics"] },
+//   { name: "Ajax", score: 37, courses: ["physics", "biology"] },
+//   { name: "Kiwi", score: 94, courses: ["literature", "science"] },
+// ];
 
 // const sortedByAxcendingScore = [...students].sort((a, b) => a.score - b.score);
 // console.log(sortedByAxcendingScore);
@@ -1017,18 +1017,42 @@ const students = [
 
 // console.log(getTotalBalanceByGender(users));
 
-const showTag = function () {
-  console.log("sgowTag -> this", this);
-  console.log("sgowTag -> this.tag", this.tag);
-};
+// const showTag = function () {
+//   console.log("sgowTag -> this", this);
+//   console.log("sgowTag -> this.tag", this.tag);
+// };
 // showTag();
 
-const user = {
-  tag: "Mango",
+// const user = {
+//   tag: "Mango",
+//   showTag() {
+//     console.log("showTag -> this", this);
+//     console.log("showTag -> this.tag", this.tag);
+//   },
+// };
+
+// const invokeAction = function (action) {
+//   console.log(action);
+
+//   action();
+// };
+
+// invokeAction(user.showTag);
+
+// const fn = function () {
+//   console.log("fn -> this", this);
+// };
+
+// fn();
+
+const book = {
+  title: "React for beginners",
+  showThis() {
+    console.log("showThis -> this", this);
+  },
+  showTitle() {
+    console.log("showTitle -> this.title", this.title);
+  },
 };
 
-user.showUserTag = showTag;
-
-console.log("user", user);
-
-user.showUserTag();
+book.showThis();
