@@ -1062,4 +1062,18 @@ const makeChangeColor = function () {
     console.log("changeColor -> this", this);
     this.color = color;
   };
+
+  const sweater = {
+    color: "teal",
+  };
+
+  sweater.updater = changeColor;
+
+  // sweater.updateColor("red");
+
+  return sweater.updateColor;
 };
+
+const swapColor = makeChangeColor();
+
+swapColor("blue");
