@@ -1045,14 +1045,21 @@ const users = [
 
 // fn();
 
-const book = {
-  title: "React for beginners",
-  showThis() {
-    console.log("showThis -> this", this);
-  },
-  showTitle() {
-    console.log("showTitle -> this.title", this.title);
-  },
-};
+// const book = {
+//   title: "React for beginners",
+//   showThis() {
+//     console.log("showThis -> this", this);
+//   },
+//   showTitle() {
+//     console.log("showTitle -> this.title", this.title);
+//   },
+// };
 
-book.showThis();
+// book.showThis();
+
+const makeChangeColor = function () {
+  const changeColor = function (color) {
+    console.log("changeColor -> this", this);
+    this.color = color;
+  };
+};
