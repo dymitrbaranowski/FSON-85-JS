@@ -1057,23 +1057,77 @@ const users = [
 
 // book.showThis();
 
-const makeChangeColor = function () {
-  const changeColor = function (color) {
-    console.log("changeColor -> this", this);
-    this.color = color;
-  };
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     console.log("changeColor -> this", this);
+//     this.color = color;
+//   };
 
-  const sweater = {
-    color: "teal",
-  };
+//   const sweater = {
+//     color: "teal",
+//   };
 
-  sweater.updater = changeColor;
+//   sweater.updater = changeColor;
 
-  // sweater.updateColor("red");
+//   // sweater.updateColor("red");
 
-  return sweater.updateColor;
+//   return sweater.updateColor;
+// };
+
+// const swapColor = makeChangeColor();
+
+// swapColor("blue");
+
+// const book = {
+//   title: "React for beginers",
+//   showThis() {
+//     console.log("showThis -> this", this);
+//   },
+//   showTitle() {
+//     console.log("ShowTitle -> this.title", this.title);
+//   },
+// };
+
+// // book.showThis();
+
+// // const outerShowThis = book.showThis;
+// // outerShowThis();
+// const outerShowTitle = book.showTitle;
+// outerShowTitle();
+
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     console.log("changeColor -> this", this);
+//   };
+//   return changeColor;
+// };
+
+// const updateColor = makeChangeColor();
+// // updateColor("yellow");
+
+// const hat = {
+//   color: "blue",
+//   updateColor,
+// };
+
+// // console.log(hat.updateColor);
+// hat.updateColor("orange");
+
+const counter = {
+  value: 0,
+  increment(value) {
+    console.log("increment -> this", this);
+    this.value += value;
+  },
+  decrement(value) {
+    console.log("decrement -> this", this);
+    this.value -= value;
+  },
 };
 
-const swapColor = makeChangeColor();
+const updateCounter = function (value, operation) {
+  operation(value);
+};
 
-swapColor("blue");
+updateCounter(10, counter.increment);
+updateCounter(5, counter.decrement);
