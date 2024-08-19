@@ -1128,6 +1128,6 @@ const counter = {
 const updateCounter = function (value, operation) {
   operation(value);
 };
-
+// При передаче колбека, объект не сохраняеться
 updateCounter(10, counter.increment);
 updateCounter(5, counter.decrement);
