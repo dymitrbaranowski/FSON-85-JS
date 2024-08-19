@@ -1113,21 +1113,78 @@ const users = [
 // // console.log(hat.updateColor);
 // hat.updateColor("orange");
 
+//
+
+// const showThis = function (...args) {
+//   console.log(args);
+//   console.log("showThis -> this", this);
+// };
+
+// showThis();
+
+// const objA = {
+//   a: 5,
+//   b: 10,
+// };
+
+// showThis.call(objA, 10, 20, 30, 40, 50);
+// showThis.apply(objA, [1, 3, 6, 3]);
+
+// const changeColor = function (color) {
+//   console.log("changeColor -> this", this);
+//   this.color = color;
+// };
+
+// const hat = {
+//   color: "black",
+// };
+
+// // changeColor.call(hat, "orange");
+// // console.log(hat);
+
+// const sweater = {
+//   color: "green",
+// };
+
+// // changeColor.call(sweater, "blue");
+// // console.log(sweater);
+
+// const changeHatColor = changeColor.bind(hat);
+// const changeSweaterColor = changeColor.bind(sweater);
+// changeHatColor("yellow");
+// console.log(hat);
+// changeSweaterColor("red");
+// console.log(sweater);
+
 const counter = {
   value: 0,
-  increment(value) {
+  increment() {
     console.log("increment -> this", this);
-    this.value += value;
+    this.value += 1;
   },
-  decrement(value) {
+  decrement() {
     console.log("decrement -> this", this);
-    this.value -= value;
+    this.value -= 1;
   },
 };
 
-const updateCounter = function (value, operation) {
-  operation(value);
-};
-// При передаче колбека, объект не сохраняеться
-updateCounter(10, counter.increment);
-updateCounter(5, counter.decrement);
+const decrementBtn = document.querySelector(".js-decrement");
+const incrementBtn = document.querySelector(".js-increment");
+const valueEl = document.querySelector(".js-value");
+
+decrementBtn.addEventListener("click", function () {
+  console.log("Кликнули на декремент");
+
+  counter.decrement();
+  console.log(counter);
+
+  valueEl.textContent = counter.value;
+});
+incrementBtn.addEventListener("click", function () {
+  console.log("Кликнули на инкремент");
+
+  counter.increment();
+  console.log(counter);
+
+  valueEl.textContent = counter.value;
+});
