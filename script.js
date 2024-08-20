@@ -1189,17 +1189,155 @@ const users = [
 //   valueEl.textContent = counter.value;
 // });
 
-("use strict");
+// ("use strict");
 
-//  console.log(this);
+// //  console.log(this);
 
-function foo() {
-  console.log(this);
-}
-foo();
+// function foo() {
+//   console.log(this);
+// }
+// foo();
 
-const arrow = () => {
-  console.log(this);
+// const arrow = () => {
+//   console.log(this);
+// };
+
+// arrow();
+// const user = {
+//   name: "Test User",
+//   getName() {
+//     console.log(this.name);
+//   },
+// };
+
+// const admin = {
+//   name: "Test Admin",
+//   getName: user.getName,
+// };
+// user.getName();
+// admin.getName();
+
+// console.log(this);
+
+// function getName() {
+//   console.log(this);
+// }
+
+// getName();
+
+// const user = {
+//   name: "user",
+//   city: "Lviv",
+//   getName,
+// };
+// user.getName();
+
+// const admin = {
+//   name: "Admin",
+//   city: "Odessa",
+//   getName,
+// };
+// admin.getName();
+
+// const user = {
+//   name: "user",
+//   city: "Lviv",
+//   thisUser: this,
+//   skills: {
+//     js: true,
+//     html: true,
+//     thisSkils: this,
+//     getSkills() {
+//       console.log(this);
+//     },
+//   },
+// };
+// user.skills.getSkills();
+
+// getThis - function declaration
+// const user = {
+//   name: "user",
+//   city: "Lviv",
+//   getThis() {
+//     console.log(this);
+//   },
+// };
+
+// user.getThis();
+
+// // geyThis - Arrow function
+// const admin = {
+//   name: "Admin",
+//   city: "Odessa",
+//   getThis: () => {
+//     console.log(this);
+//   },
+// };
+
+// Правила визначення this
+// Визначити з яким типом функції працюемо
+// 2 Маємо умовне поділення на два табори
+// 2.1 Перший це Function & Function Expretion
+// 2.2 Другий це Arrow Function
+// 3 Function Declaration & Function Expration визначають this тим, хто їх викликав, перший ліворуч
+// admin.getThis();
+// 4  Arrow Function в рамках чого вона була створена
+
+// const user = {
+//   name: "user",
+//   city: "Lviv",
+//   getThis() {
+//     const deepThis = () => {
+//       console.log(this);
+//     };
+//     deepThis();
+//   },
+// };
+
+// user.getThis();
+
+//------------------------------------
+
+// Arrow function бере тыльки батькывський this з місця, де вона була оголошена>
+
+// console.log(this);
+// const deepThis = () => {
+//   console.log(this);
+// };
+
+// const admin = {
+//   name: "Admin",
+//   city: "Odessa",
+//   getThis() {
+//     console.log(this);
+//     deepThis();
+//   },
+// };
+// admin.getThis();
+
+const user = {
+  name: "User",
+  skills: ["html", "css"],
+  addSkils(skill) {
+    console.log("Skill has been added", skill);
+    this.skills.push(skill);
+  },
+  removeSkills(skill) {
+    if (this.skills.includes(skill)) {
+      const idx = this.skills.indexOf(skill);
+      this.skills.splice(idx, 1);
+      console.log("Skill has been removed", skill);
+    } else {
+      console.log("Not found");
+    }
+  },
 };
+//
 
-arrow();
+function process(skill, callback) {
+  console.log("Зачекайте декілька хвилин");
+  callback(skill);
+}
+
+// process("js", user.addSkils);
+process("js", user.removeSkills);
