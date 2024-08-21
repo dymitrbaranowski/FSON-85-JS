@@ -1333,15 +1333,19 @@ const user = {
   },
 };
 
-user.addSkill("js");
-console.log(user.skills);
+// user.addSkill("js");
+// console.log(user.skills);
 
-user.removeSkill("js");
-console.log(user.skills);
-// function process(skill, callback) {
-//   console.log("Зачекайте декілька хвилин");
-//   callback(skill);
-// }
+// user.removeSkill("js");
+// console.log(user.skills);
+function process(skill, callback) {
+  console.log("Зачекайте декілька хвилин");
+  callback(skill);
+}
 
-// // process("js", user.addSkils);
-// process("js", user.removeSkills);
+// console.log(user.addSkill);
+// console.log(user.addSkill.bind(user));
+// process("js", user.addSkill.bind(user));
+// console.log(user.skills);
+// process("js", user.removeSkill.bind(user));
+// console.log(user.skills);
