@@ -1318,11 +1318,11 @@ const users = [
 const user = {
   name: "User",
   skills: ["html", "css"],
-  addSkils(skill) {
+  addSkill(skill) {
     console.log("Skill has been added", skill);
     this.skills.push(skill);
   },
-  removeSkills(skill) {
+  removeSkill(skill) {
     if (this.skills.includes(skill)) {
       const idx = this.skills.indexOf(skill);
       this.skills.splice(idx, 1);
@@ -1332,12 +1332,16 @@ const user = {
     }
   },
 };
-//
 
-function process(skill, callback) {
-  console.log("Зачекайте декілька хвилин");
-  callback(skill);
-}
+user.addSkill("js");
+console.log(user.skills);
 
-// process("js", user.addSkils);
-process("js", user.removeSkills);
+user.removeSkill("js");
+console.log(user.skills);
+// function process(skill, callback) {
+//   console.log("Зачекайте декілька хвилин");
+//   callback(skill);
+// }
+
+// // process("js", user.addSkils);
+// process("js", user.removeSkills);
