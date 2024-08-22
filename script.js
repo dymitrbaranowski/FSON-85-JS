@@ -1315,33 +1315,33 @@ const users = [
 // };
 // admin.getThis();
 
-const user = {
-  name: "User",
-  skills: ["html", "css"],
-  addSkill(skill) {
-    console.log("Skill has been added", skill);
-    this.skills.push(skill);
-  },
-  removeSkill(skill) {
-    if (this.skills.includes(skill)) {
-      const idx = this.skills.indexOf(skill);
-      this.skills.splice(idx, 1);
-      console.log("Skill has been removed", skill);
-    } else {
-      console.log("Not found");
-    }
-  },
-};
+// const user = {
+//   name: "User",
+//   skills: ["html", "css"],
+//   addSkill(skill) {
+//     console.log("Skill has been added", skill);
+//     this.skills.push(skill);
+//   },
+//   removeSkill(skill) {
+//     if (this.skills.includes(skill)) {
+//       const idx = this.skills.indexOf(skill);
+//       this.skills.splice(idx, 1);
+//       console.log("Skill has been removed", skill);
+//     } else {
+//       console.log("Not found");
+//     }
+//   },
+// };
 
 // user.addSkill("js");
 // console.log(user.skills);
 
 // user.removeSkill("js");
 // console.log(user.skills);
-function process(skill, callback) {
-  console.log("Зачекайте декілька хвилин");
-  callback(skill);
-}
+// function process(skill, callback) {
+//   console.log("Зачекайте декілька хвилин");
+//   callback(skill);
+// }
 
 // console.log(user.addSkill);
 // console.log(user.addSkill.bind(user));
@@ -1349,3 +1349,180 @@ function process(skill, callback) {
 // console.log(user.skills);
 // process("js", user.removeSkill.bind(user));
 // console.log(user.skills);
+// const arr = [1, 2];
+// const objA = {
+//   name: "objA",
+// };
+// function foo(a, b) {
+//   console.log(this);
+//   // console.log(arguments);
+//   console.log("a", a);
+//   console.log("a", b);
+// }
+
+// foo.apply(objA, [1, 2]);
+
+// foo.apply(objA);
+
+// bind----------------
+
+// const objA = {
+//   name: "objA",
+// };
+
+// function foo(a, b) {
+//   console.log(arguments);
+//   // console.log(arguments);
+//   console.log("a", a);
+//   console.log("a", b);
+// }
+
+// const copy = foo.bind(objA);
+// // console.log(copy);
+// copy(1, 4);
+// copy(2, 5);
+// copy(3, 6);
+// copy(4, 7);
+// copy(5, 7);
+// copy(6, 7);
+
+// const objA = {
+//   name: "objA",
+// };
+// const objB = {
+//   name: "objB",
+// };
+
+// function foo(a, b) {
+//   console.log(this);
+//   // console.log(arguments);
+//   console.log("a", a);
+//   console.log("b", b);
+// }
+
+// const copy = foo.bind(objA);
+// copy(1, 3);
+// copy.call(objB, 2, 4);
+//Practice---------------------------------------------------------
+//1 -Майстерня коштовностей----------------------
+//Напишіть метод calcTotlaPrice(stoneName),
+// який приймає назву каменю і розраховує та повертає
+// загальну вартість каменів з таким ім'ям, ціною
+//та кількістю із властивості stones.
+
+// const chopShop = {
+//   stones: [
+//     { name: "Emerald", price: 1300, quantity: 4 },
+//     { name: "Diamond", price: 2700, quantity: 3 },
+//     { name: "Sapphire", price: 1400, quantity: 7 },
+//     { name: "Ruby", price: 800, quantity: 2 },
+//   ],
+//   calcTotalPrice(stoneName) {
+//     // const stone = this.stones.find(({ name }) => name === stoneName);
+
+//     // if (stone) {
+//     //   return stone.price * stone.quantity;
+//     // }
+//     // return "Not Fount";
+
+//     const { price, quantity } = this.stones.find(
+//       ({ name }) => name === stoneName
+//     );
+//     return price * quantity;
+//   },
+// };
+
+// console.log(chopShop.calcTotalPrice("Emerald")); //5200
+// console.log(chopShop.calcTotalPrice("Diamond")); //8100
+// console.log(chopShop.calcTotalPrice("Sapphire")); //9800
+// console.log(chopShop.calcTotalPrice("Ruby")); //1600
+
+//Example 2 - Телефонна книга
+// Виконайте рефакторинг методів об'єкта phonebook щоб код запрацював.
+// function getDate() {
+//   return Date.now();
+// }
+// const phonebook = {
+//   contacts: [],
+//   add(contact) {
+//     const newContact = {
+//       list: "default",
+//       ...contact,
+//       id: this.generateId(),
+//       createdAt: this.getDate(),
+//     };
+//     this.contacts.push(newContact);
+//   },
+//   generateId() {
+//     return "_" + Math.random().toString(36).substr(2, 9);
+//   },
+//   getDate() {
+//     return Date.now();
+//   },
+// };
+
+// console.log(
+//   phonebook.add({
+//     name: "Mango",
+//     email: "mango@mail.com",
+//     list: "friends",
+//   })
+// );
+
+// phonebook.add({
+//   name: "Poly",
+//   email: "poly@hotmail.com",
+// });
+// console.log(phonebook.contacts);
+
+// Example 3 -Калькулятор
+// Створіть об'єкт calkulator з трьома методами:
+
+// read(a,b)- приймає два значення та зберігає їх як властивості об'єкта.
+// add()- повертає суму збережених значень.
+// mult()- перемножує збережені значення та повертає результат.
+
+// const calculator = {
+//   a: 2,
+//   read(a = 0, b = 0) {
+//     this.a = a;
+//     this.b = b;
+//   },
+
+//   add() {
+//     //   || ?? null undefined
+//     return (this.a ?? 0) + (this.b ?? 0);
+
+//     // if (this.a === undefined) {
+//     //   this.a = 0;
+//     // }
+//     // if (this.b === undefined) {
+//     //   this.b = 0;
+//     // }
+//     // return this.a + this.b;
+//   },
+
+//   mult() {
+//     return !this.a && !this.b ? 0 : (this.a ?? 1) * (this.b ?? 1);
+//   },
+// };
+// console.log(calculator);
+// calculator.read(0, 2);
+// console.log(calculator.mult());
+// // console.log(calculator.add());
+// console.log(calculator);
+
+// console.log("" || 1);
+// console.log(0 || 1);
+// console.log(undefined || 1);
+// console.log(null || 1);
+// console.log(NaN || 1);
+// console.log(false || 1);
+
+console.log("" ?? 1);
+console.log(0 ?? 1);
+console.log(NaN ?? 1);
+console.log(false ?? 1);
+
+console.log(undefined ?? 1); //1
+console.log(null ?? 1); //1
