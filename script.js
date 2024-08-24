@@ -1519,10 +1519,106 @@ const users = [
 // console.log(NaN || 1);
 // console.log(false || 1);
 
-console.log("" ?? 1);
-console.log(0 ?? 1);
-console.log(NaN ?? 1);
-console.log(false ?? 1);
+// console.log("" ?? 1);
+// console.log(0 ?? 1);
+// console.log(NaN ?? 1);
+// console.log(false ?? 1);
 
-console.log(undefined ?? 1); //1
-console.log(null ?? 1); //1
+// console.log(undefined ?? 1); //1
+// console.log(null ?? 1); //1
+
+// const baseSalary = 30000;
+// const overTime = 10;
+// const rate = 20;
+
+// const getWage = (baseSalary, overTime, rate) => {
+//   return baseSalary + overTime * rate;
+// };
+
+// console.log(getWage(baseSalary, overTime, rate));
+
+// const animal = { eats: true };
+// const dog = Object.create(animal);
+// dog.barks = true;
+
+// for (const key in dog) {
+//   console.log(key);
+// }
+
+// for (const key in dog) {
+//   if (!dog.hasOwnProperty(key)) continue;
+//   console.log(key);
+// }
+
+// const animal = { eats: true };
+// const dog = Object.create(animal);
+// dog.barks = true;
+
+// const dogKeys = Object.keys(dog);
+
+// console.log(dogKeys);
+
+// Класи _---------------------------------
+
+// class User {
+//   // ------ body of class
+// }
+
+// const mango = new User();
+// console.log(mango);
+
+// const poly = new User();
+// console.log(poly);
+
+// class User {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+// }
+
+// const mango = new User("Mango", "mango@mail.com");
+// console.log(mango);
+
+// const poly = new User("Poly", "poly@mail.com");
+// console.log(poly);
+
+// const objA = {
+//   name: "objA",
+//   sayHello() {
+//     console.log(this.name);
+//   },
+// };
+
+// const objB = Object.create(objA);
+// objB.name = "objB";
+// console.log(objB);
+// console.log(objB.name);
+// objB.sayHello();
+// // objA.go();
+
+// const user = {
+//   name: "user",
+//   email: "test@mail.com",
+// };
+
+// const admin = Object.create(user);
+// admin.root = true;
+
+// const superAdmin = Object.create(admin);
+// superAdmin.secretKey = "qwerty";
+// console.log(superAdmin);
+// console.log(superAdmin.name);
+
+// const castomer = Object.create(user);
+// castomer.limit = 10000;
+
+class User {
+  constructor(userName, age) {
+    this.name = userName;
+    this.age = age;
+  }
+}
+
+const artem = new User("Artem", 28);
+console.log(artem);
