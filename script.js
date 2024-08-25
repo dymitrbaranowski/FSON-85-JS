@@ -1621,4 +1621,9 @@ class User {
 }
 
 const artem = new User("Artem", 28);
+// const alex = new User("Alex", 28);
+artem.name = "Leo";
+console.log(artem.name);
+
 console.log(artem);
+// console.log(alex);
