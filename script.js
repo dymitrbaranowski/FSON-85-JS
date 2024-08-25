@@ -1613,17 +1613,98 @@ const users = [
 // const castomer = Object.create(user);
 // castomer.limit = 10000;
 
+// class User {
+//   #email;
+//   constructor(userName, age, email) {
+//     this.name = userName;
+//     this.age = age;
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     const pass = "querty111";
+//     const message = prompt(` ${this.name} Enter secret key`);
+//     if (pass === message) {
+//       return this.#email;
+//     }
+//     alert("GO HOME");
+//   }
+//   set email(newEmail) {
+//     if (newEmail.includes("@gmail.com")) {
+//       this.#email = newEmail;
+//       return;
+//     }
+//     alert("Must include @gmail.com");
+//   }
+// }
+
+//const artem = new User("Artem", 28, "test@mail.com");
+// const alex = new User("Alex", 28);
+// artem.name = "Leo";
+// console.log(artem.name);
+// console.log(artem.email);
+// artem.email = "artem@gmail.com";
+
+// console.log(artem);
+// console.log(alex);
+
+// //Get
+// console.log(artem.name);
+// //Set
+// artem.email = "artem@gmail.com";
+
 class User {
-  constructor(userName, age) {
+  static counter = 0;
+  static addUser() {
+    this.counter += 1;
+  }
+  #email;
+  constructor(userName, age, email) {
     this.name = userName;
     this.age = age;
+    this.#email = email;
+    User.addUser();
+  }
+
+  #checkAge() {
+    if (this.age >= 18) {
+      return true;
+    }
+
+    return false;
+  }
+
+  buy(product) {
+    if (!this.#checkAge()) {
+      alert("😊");
+    }
+  }
+  get email() {
+    const pass = "querty111";
+    const message = prompt(` ${this.name} Enter secret key`);
+    if (pass === message) {
+      return this.#email;
+    }
+    alert("GO HOME");
+  }
+  set email(newEmail) {
+    if (newEmail.includes("@gmail.com")) {
+      this.#email = newEmail;
+      return;
+    }
+    alert("Must include @gmail.com");
   }
 }
 
-const artem = new User("Artem", 28);
-// const alex = new User("Alex", 28);
-artem.name = "Leo";
-console.log(artem.name);
-
-console.log(artem);
-// console.log(alex);
+const artem = new User("Artem", 14, "test@mail.com");
+const artem1 = new User("Artem", 14, "test@mail.com");
+const artem2 = new User("Artem", 14, "test@mail.com");
+const artem3 = new User("Artem", 14, "test@mail.com");
+const artem4 = new User("Artem", 14, "test@mail.com");
+const artem5 = new User("Artem", 14, "test@mail.com");
+const artem6 = new User("Artem", 14, "test@mail.com");
+const artem7 = new User("Artem", 14, "test@mail.com");
+// artem.buy();
+// artem.#checkAge()
+// console.log(artem);
+console.log(User.counter);
