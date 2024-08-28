@@ -1696,15 +1696,27 @@ class User {
   }
 }
 
-const artem = new User("Artem", 14, "test@mail.com");
-const artem1 = new User("Artem", 14, "test@mail.com");
-const artem2 = new User("Artem", 14, "test@mail.com");
-const artem3 = new User("Artem", 14, "test@mail.com");
-const artem4 = new User("Artem", 14, "test@mail.com");
-const artem5 = new User("Artem", 14, "test@mail.com");
-const artem6 = new User("Artem", 14, "test@mail.com");
-const artem7 = new User("Artem", 14, "test@mail.com");
-// artem.buy();
-// artem.#checkAge()
-// console.log(artem);
-console.log(User.counter);
+// const artem = new User("Artem", 14, "test@mail.com");
+// const artem1 = new User("Artem", 14, "test@mail.com");
+// const artem2 = new User("Artem", 14, "test@mail.com");
+// const artem3 = new User("Artem", 14, "test@mail.com");
+// const artem4 = new User("Artem", 14, "test@mail.com");
+// const artem5 = new User("Artem", 14, "test@mail.com");
+// const artem6 = new User("Artem", 14, "test@mail.com");
+// const artem7 = new User("Artem", 14, "test@mail.com");
+// // artem.buy();
+// // artem.#checkAge()
+// // console.log(artem);
+// console.log(User.counter);
+
+class Human extends User {
+  constructor(name, age, email, hp, damage) {
+    super(name, age, email);
+    this.hp = hp;
+    this.damage = damage;
+  }
+}
+
+const artem = new Human("Artem", 14, "test@mail.com", 200, 20);
+
+console.log(artem);
