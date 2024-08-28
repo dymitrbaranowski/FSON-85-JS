@@ -1653,48 +1653,48 @@ const users = [
 // //Set
 // artem.email = "artem@gmail.com";
 
-class User {
-  static counter = 0;
-  static addUser() {
-    this.counter += 1;
-  }
-  #email;
-  constructor(userName, age, email) {
-    this.name = userName;
-    this.age = age;
-    this.#email = email;
-    User.addUser();
-  }
+// class User {
+//   static counter = 0;
+//   static addUser() {
+//     this.counter += 1;
+//   }
+//   #email;
+//   constructor(userName, age, email) {
+//     this.name = userName;
+//     this.age = age;
+//     this.#email = email;
+//     User.addUser();
+//   }
 
-  #checkAge() {
-    if (this.age >= 18) {
-      return true;
-    }
+//   #checkAge() {
+//     if (this.age >= 18) {
+//       return true;
+//     }
 
-    return false;
-  }
+//     return false;
+//   }
 
-  buy(product) {
-    if (!this.#checkAge()) {
-      alert("😊");
-    }
-  }
-  get email() {
-    const pass = "querty111";
-    const message = prompt(` ${this.name} Enter secret key`);
-    if (pass === message) {
-      return this.#email;
-    }
-    alert("GO HOME");
-  }
-  set email(newEmail) {
-    if (newEmail.includes("@gmail.com")) {
-      this.#email = newEmail;
-      return;
-    }
-    alert("Must include @gmail.com");
-  }
-}
+//   buy(product) {
+//     if (!this.#checkAge()) {
+//       alert("😊");
+//     }
+//   }
+//   get email() {
+//     const pass = "querty111";
+//     const message = prompt(` ${this.name} Enter secret key`);
+//     if (pass === message) {
+//       return this.#email;
+//     }
+//     alert("GO HOME");
+//   }
+//   set email(newEmail) {
+//     if (newEmail.includes("@gmail.com")) {
+//       this.#email = newEmail;
+//       return;
+//     }
+//     alert("Must include @gmail.com");
+//   }
+// }
 
 // const artem = new User("Artem", 14, "test@mail.com");
 // const artem1 = new User("Artem", 14, "test@mail.com");
@@ -1709,14 +1709,14 @@ class User {
 // // console.log(artem);
 // console.log(User.counter);
 
-class Human extends User {
-  constructor(name, age, email, hp, damage) {
-    super(name, age, email);
-    this.hp = hp;
-    this.damage = damage;
-  }
-}
+// class Human extends User {
+//   constructor(name, age, email, hp, damage) {
+//     super(name, age, email);
+//     this.hp = hp;
+//     this.damage = damage;
+//   }
+// }
 
-const artem = new Human("Artem", 14, "test@mail.com", 200, 20);
+// const artem = new Human("Artem", 14, "test@mail.com", 200, 20);
 
-console.log(artem);
+// console.log(artem);
