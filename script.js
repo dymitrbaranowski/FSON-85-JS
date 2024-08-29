@@ -1720,3 +1720,33 @@ const users = [
 // const artem = new Human("Artem", 14, "test@mail.com", 200, 20);
 
 // console.log(artem);
+
+class User {
+  constructor({ name, age, numberOfPosts, topics }) {
+    this.name = name;
+    this.age = age;
+
+    this.numberOfPosts = numberOfPosts;
+  }
+
+  getInfo() {
+    return `User ${this.name} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+  }
+  updatePostCount(value) {
+    if (typeof value === "number" && !isNaN(value)) {
+      this.numberOfPosts += value;
+      return;
+    }
+
+    return "Error";
+  }
+}
+const mango = new User({
+  name: "mango@mail.com",
+  age: 24,
+  numberOfPosts: 20,
+  topics: ["tech", "cooking"],
+});
+console.log(mango.getInfo());
+mango.updatePostCount(5);
+console.log(mango.getInfo());
