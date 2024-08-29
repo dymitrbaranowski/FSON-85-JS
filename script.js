@@ -1721,32 +1721,103 @@ const users = [
 
 // console.log(artem);
 
+// class User {
+//   constructor({ name, age, numberOfPosts, topics }) {
+//     this.name = name;
+//     this.age = age;
+
+//     this.numberOfPosts = numberOfPosts;
+//   }
+
+//   getInfo() {
+//     return `User ${this.name} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+//   }
+//   updatePostCount(value) {
+//     if (typeof value === "number" && !isNaN(value)) {
+//       this.numberOfPosts += value;
+//       return;
+//     }
+//     alert("Error");
+//   }
+// }
+// const mango = new User({
+//   name: "mango@mail.com",
+//   age: 24,
+//   numberOfPosts: 20,
+//   topics: ["tech", "cooking"],
+// });
+// console.log(mango.getInfo());
+// mango.updatePostCount(5 + null);
+// console.log(mango.getInfo());
+
+// class Storage {
+//   constructor(products) {
+//     this.items = products;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+
+//   addItem(item) {
+//     if (!this.items.includes(item)) {
+//       this.items.push(item);
+//     }
+//   }
+
+//   removeItem(item) {
+//     const idx = this.items.indexOf(item);
+//     // !! -> Boolean()
+//     // ~ (idx + 1) -1 => 0 (0 + 1)=> -1
+//     if (!!~idx) {
+//       this.items.splice(idx, 1);
+//     }
+//   }
+// }
+
+// const storage = new Storage(["🍎", "🍏", "🍋", "🫐", "🍑"]);
+
+// const items = storage.getItems();
+// console.table(items);
+
+// storage.addItem("💐");
+// storage.addItem("🌸");
+// storage.addItem("🏫");
+// storage.addItem("🕚");
+// console.table(items);
+
+// storage.removeItem("🍋");
+// console.table(items);
+// storage.removeItem("🍋");
+// console.table(items);
+
 class User {
-  constructor({ name, age, numberOfPosts, topics }) {
-    this.name = name;
-    this.age = age;
-
-    this.numberOfPosts = numberOfPosts;
+  #email;
+  #login;
+  constructor({ login, email }) {
+    this.#email = email;
+    this.#login = login;
   }
 
-  getInfo() {
-    return `User ${this.name} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+  get email() {
+    return this.#email;
   }
-  updatePostCount(value) {
-    if (typeof value === "number" && !isNaN(value)) {
-      this.numberOfPosts += value;
-      return;
-    }
 
-    return "Error";
+  set email(newEmail) {
+    // condition
+    this.#email = newEmail;
+  }
+
+  get login() {
+    return this.#login;
+  }
+
+  set login(newLogin) {
+    // condition
+    this.login = ne;
   }
 }
+
 const mango = new User({
-  name: "mango@mail.com",
-  age: 24,
-  numberOfPosts: 20,
-  topics: ["tech", "cooking"],
+  login: "Mango",
+  email: "mango@dog.woof",
 });
-console.log(mango.getInfo());
-mango.updatePostCount(5);
-console.log(mango.getInfo());
