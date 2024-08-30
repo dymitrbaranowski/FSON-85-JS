@@ -1900,3 +1900,23 @@ const users = [
 
 // const secondToggle = new Toggle();
 // console.log(secondToggle);
+
+//
+
+const Car = function ({ brand, model, price } = {}) {
+  // const { brand, model, price } = config;
+  this.brand = brand;
+  this.model = model;
+  this.price = price;
+};
+
+const myCar = new Car({ brand: "Audi", model: "03", price: 35000 });
+console.log(myCar);
+
+const myCar2 = new Car({ brand: "BMW", name: "x2", price: 50000 });
+console.log(myCar2);
+
+const myCar3 = new Car();
+console.log(myCar3);
+
+// console.log(myCar);
