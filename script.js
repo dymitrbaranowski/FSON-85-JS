@@ -1767,7 +1767,7 @@ const users = [
 //   removeItem(item) {
 //     const idx = this.items.indexOf(item);
 //     // !! -> Boolean()
-//     // ~ (idx + 1) -1 => 0 (0 + 1)=> -1
+//     // ~ (idx + 1) -1 => 0 - > - (0 + 1)=> -1
 //     if (!!~idx) {
 //       this.items.splice(idx, 1);
 //     }
@@ -1790,34 +1790,113 @@ const users = [
 // storage.removeItem("🍋");
 // console.table(items);
 
-class User {
-  #email;
-  #login;
-  constructor({ login, email }) {
-    this.#email = email;
-    this.#login = login;
-  }
+// class User {
+//   #email;
+//   #login;
+//   constructor({ login, email }) {
+//     this.#email = email;
+//     this.#login = login;
+//   }
 
-  get email() {
-    return this.#email;
-  }
+//   get email() {
+//     return this.#email;
+//   }
 
-  set email(newEmail) {
-    // condition
-    this.#email = newEmail;
-  }
+//   set email(newEmail) {
+//     // condition
+//     this.#email = newEmail;
+//   }
 
-  get login() {
-    return this.#login;
-  }
+//   get login() {
+//     return this.#login;
+//   }
 
-  set login(newLogin) {
-    // condition
-    this.login = ne;
-  }
-}
+//   set login(newLogin) {
+//     // condition
+//     this.login = ne;
+//   }
+// }
 
-const mango = new User({
-  login: "Mango",
-  email: "mango@dog.woof",
-});
+// const mango = new User({
+//   login: "Mango",
+//   email: "mango@dog.woof",
+// });
+
+// class Notes {
+//   static Priority = {
+//     LOW: "low",
+//     NORMAL: "normal",
+//     HIGTH: "higth",
+//   };
+//   constructor(arr) {
+//     this.items = arr;
+//   }
+//   addNote(obj) {
+//     const inNotes = this.items.some(({ text }) => text === obj.text);
+//     if (!inNotes) {
+//       this.items.push(obj);
+//     }
+//     console.log(inNotes);
+//   }
+//   removeNotes(text) {
+//     const idx = this.items.findIndex(({ text: noteText }) => text === noteText);
+
+//     if (!!~idx) {
+//       this.items.splice(idx, 1);
+//     }
+//   }
+//   updateNote(text, newPriority) {
+//     const idx = this.items.findIndex(({ text: noteText }) => text === noteText);
+//     if (!!~idx) {
+//       this.items[idx].priority = newPriority;
+//     }
+//   }
+// }
+
+// const myNotes = new Notes([]);
+
+// myNotes.addNote({ text: "Моя перша замітка", priority: Notes.Priority.LOW });
+// console.log(myNotes.items);
+
+// myNotes.addNote({
+//   text: "Моя друга замітка",
+//   priority: Notes.Priority.NORMAL,
+// });
+// console.log(myNotes.items);
+
+// myNotes.removeNotes("Моя перша замітка");
+// console.log(myNotes.items);
+
+// myNotes.updateNote("Моя друга замітка", Notes.Priority.HIGTH);
+// console.log(myNotes.items);
+
+// Example 5 = Toggle
+//Напишіть клас Toggle  який приймає об'єкт налаштувань {isOpen: boolean} і
+// оголошує одну властивість on - стан вкл/викл (true/false). За замовчуванням
+// значення властивості on має бути false.
+
+// class Toggle {
+//   constructor({ isOpen = false } = {}) {
+//     this.on = isOpen;
+//   }
+//   toggle() {
+//     this.on = !this.on;
+//   }
+// }
+
+// const firstToggle = new Toggle({ isOpen: true });
+// console.log(firstToggle);
+// console.group("firstToggle");
+// console.log(firstToggle.on);
+// firstToggle.toggle();
+// console.log(firstToggle.on);
+// firstToggle.toggle();
+// console.log(firstToggle.on);
+// firstToggle.toggle();
+// console.log(firstToggle.on);
+// firstToggle.toggle();
+// console.log(firstToggle.on);
+// console.groupEnd("firstToggle");
+
+// const secondToggle = new Toggle();
+// console.log(secondToggle);
