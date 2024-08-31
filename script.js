@@ -1908,15 +1908,57 @@ const Car = function ({ brand, model, price } = {}) {
   this.brand = brand;
   this.model = model;
   this.price = price;
+
+  // this.changePrice = function (newPrice) {
+  //   this.price = newPrice;
+  // };
 };
 
-const myCar = new Car({ brand: "Audi", model: "03", price: 35000 });
-console.log(myCar);
+Car.prototype.sayHi = function () {
+  console.log("Car.prototype.sayHi -> this", this);
+  console.log("Hello :) ");
+};
 
-const myCar2 = new Car({ brand: "BMW", name: "x2", price: 50000 });
-console.log(myCar2);
+Car.prototype.changePrice = function (newPrice) {
+  this.price = newPrice;
+};
 
-const myCar3 = new Car();
-console.log(myCar3);
+// console.log(Car.prototype);
+
+// const myCar = new Car({ brand: "Audi", model: "03", price: 35000 });
+// console.log(myCar);
+
+// myCar.sayHi();
+// myCar.changePrice(10000);
+
+// const myCar2 = new Car({ brand: "BMW", model: "x2", price: 50000 });
+// console.log(myCar2);
+
+// myCar.sayHi();
+
+// const myCar3 = new Car({ brand: "Audi", model: "a6", price: 65000 });
+// console.log(myCar3);
+// myCar.sayHi();
 
 // console.log(myCar);
+
+const User = function ({ email, password } = {}) {
+  this.email = email;
+  this.password = password;
+};
+
+User.prototype.changeEmail = function (newMail) {
+  this.email = newMail;
+};
+
+const mango = new User({ email: "mango@mail.com", password: 111111 });
+
+mango.changeEmail("my-new-mail@mail.com");
+console.log(mango);
+
+User.message = "Я статическое свойство, меня нет на экземпляре и в прототипе";
+User.logInfo = function (obj) {
+  console.log("User.logInfo -> obj", obj);
+};
+
+User.logInfo(mango);
