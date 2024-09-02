@@ -1964,17 +1964,61 @@ const users = [
 // User.logInfo(mango);
 
 class Car1 {
-  constructor() {
-    console.log("Выполняется constructor");
-    console.log(this);
+  static description = "AAA";
 
-    this.a = 5;
-    this.b = 10;
+  static logInfo(carObj) {
+    console.log("Car.logInfo -> carObj", carObj);
   }
+
+  constructor({ brand, model, price } = {}) {
+    // console.log("Выполняется constructor");
+    // console.log(this);
+
+    this.brand = brand;
+    this._model = model;
+    this.price = price;
+  }
+
+  changePrice(newPrice) {
+    this.price = newPrice;
+
+    // console.log(this.#test);
+  }
+
+  // setModel(newModel) {
+  //   this.model = newModel;
+  // }
+
+  set model(newModel) {
+    this._model = newModel;
+  }
+
+  get model() {
+    return this._model;
+  }
+  // getModel() {
+  //   return this.model;
+  // }
 }
 
-console.dir(Car1);
+// Car1.AAA = "AAA";
 
-const carInstance = new Car1();
+// console.dir(Car1);
+
+// console.log(Car1.description);
+
+const carInstance = new Car1({
+  brand: "Audi",
+  model: "Q3",
+  price: 35000,
+});
+
+// console.log(carInstance.getModel());
+
+// carInstance.setModel("Q4");
+// console.log(carInstance.getModel());
 
 console.log(carInstance);
+console.log(carInstance.model);
+
+carInstance.model = "Q4";
