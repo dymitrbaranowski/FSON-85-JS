@@ -1976,7 +1976,15 @@ class Car1 {
 
     this.brand = brand;
     this._model = model;
-    this.price = price;
+    this._price = price;
+  }
+
+  get price() {
+    return this._price;
+  }
+
+  set price(newPrice) {
+    this._price = newPrice;
   }
 
   changePrice(newPrice) {
@@ -2018,7 +2026,40 @@ const carInstance = new Car1({
 // carInstance.setModel("Q4");
 // console.log(carInstance.getModel());
 
-console.log(carInstance);
-console.log(carInstance.model);
+// console.log(carInstance);
+// console.log(carInstance.model);
 
-carInstance.model = "Q4";
+// carInstance.model = "Q4";
+// console.log(carInstance.model);
+
+// console.log(carInstance.price);
+// carInstance.price = 50000;
+// console.log(carInstance.price);
+// console.log(carInstance);
+
+class Hero {
+  constructor(name = "hero", xp = 0) {
+    this.name = name;
+    this.xp = xp;
+  }
+  gainXp(amount) {
+    console.log(`${this.name} получает ${amount} опыта`);
+    this.xp += amount;
+  }
+}
+
+// const mango = new Hero({ name: "mango", xp: 1000 });
+
+class Warrior extends Hero {
+  constructor(name, xp, weapon) {
+    super(name, xp);
+
+    this.weapon = weapon;
+  }
+}
+
+const mango = new Warrior("mango", 1000, "алебарда");
+console.log(mango);
+
+console.log("Warrior.prototype", Warrior.prototype);
+console.log("Hero.prototype", Hero.prototype);
