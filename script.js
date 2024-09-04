@@ -1963,51 +1963,51 @@ const users = [
 
 // User.logInfo(mango);
 
-class Car1 {
-  static description = "AAA";
+// class Car1 {
+//   static description = "AAA";
 
-  static logInfo(carObj) {
-    console.log("Car.logInfo -> carObj", carObj);
-  }
+//   static logInfo(carObj) {
+//     console.log("Car.logInfo -> carObj", carObj);
+//   }
 
-  constructor({ brand, model, price } = {}) {
-    // console.log("Выполняется constructor");
-    // console.log(this);
+//   constructor({ brand, model, price } = {}) {
+//     // console.log("Выполняется constructor");
+//     // console.log(this);
 
-    this.brand = brand;
-    this._model = model;
-    this._price = price;
-  }
+//     this.brand = brand;
+//     this._model = model;
+//     this._price = price;
+//   }
 
-  get price() {
-    return this._price;
-  }
+//   get price() {
+//     return this._price;
+//   }
 
-  set price(newPrice) {
-    this._price = newPrice;
-  }
+//   set price(newPrice) {
+//     this._price = newPrice;
+//   }
 
-  changePrice(newPrice) {
-    this.price = newPrice;
+//   changePrice(newPrice) {
+//     this.price = newPrice;
 
-    // console.log(this.#test);
-  }
+//     // console.log(this.#test);
+//   }
 
-  // setModel(newModel) {
-  //   this.model = newModel;
-  // }
+// setModel(newModel) {
+//   this.model = newModel;
+// }
 
-  set model(newModel) {
-    this._model = newModel;
-  }
+//   set model(newModel) {
+//     this._model = newModel;
+//   }
 
-  get model() {
-    return this._model;
-  }
-  // getModel() {
-  //   return this.model;
-  // }
-}
+//   get model() {
+//     return this._model;
+//   }
+//   // getModel() {
+//   //   return this.model;
+//   // }
+// }
 
 // Car1.AAA = "AAA";
 
@@ -2015,11 +2015,11 @@ class Car1 {
 
 // console.log(Car1.description);
 
-const carInstance = new Car1({
-  brand: "Audi",
-  model: "Q3",
-  price: 35000,
-});
+// const carInstance = new Car1({
+//   brand: "Audi",
+//   model: "Q3",
+//   price: 35000,
+// });
 
 // console.log(carInstance.getModel());
 
@@ -2037,29 +2037,162 @@ const carInstance = new Car1({
 // console.log(carInstance.price);
 // console.log(carInstance);
 
-class Hero {
-  constructor(name = "hero", xp = 0) {
-    this.name = name;
-    this.xp = xp;
-  }
-  gainXp(amount) {
-    console.log(`${this.name} получает ${amount} опыта`);
-    this.xp += amount;
-  }
-}
+// class Hero {
+//   constructor({ name = "hero", xp = 0 } = {}) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+//   gainXp(amount) {
+//     console.log(`${this.name} получает ${amount} опыта`);
+//     this.xp += amount;
+//   }
+// }
 
-// const mango = new Hero({ name: "mango", xp: 1000 });
+// // const mango = new Hero({ name: "mango", xp: 1000 });
 
-class Warrior extends Hero {
-  constructor(name, xp, weapon) {
-    super(name, xp);
+// class Warrior extends Hero {
+//   constructor({ weapon, ...restProps } = {}) {
+//     super(restProps);
 
-    this.weapon = weapon;
-  }
-}
+//     this.weapon = weapon;
+//   }
 
-const mango = new Warrior("mango", 1000, "алебарда");
-console.log(mango);
+//   attack() {
+//     console.log(`${this.name} атакует используя ${this.weapon}`);
+//   }
+// }
 
-console.log("Warrior.prototype", Warrior.prototype);
-console.log("Hero.prototype", Hero.prototype);
+// class Berserk extends Warrior {
+//   constructor({ warcry, ...restProps } = {}) {
+//     super(restProps);
+
+//     this.warcry = warcry;
+//   }
+
+//   babyRage() {
+//     console.log(this.warcry);
+//   }
+// }
+
+// const ajax = new Berserk({
+//   name: "ajax",
+//   xp: 500,
+//   weapon: "axe",
+//   warcry: "waaaaaaah",
+// });
+
+// console.log(ajax);
+// ajax.babyRage();
+// ajax.attack();
+// ajax.gainXp(500);
+// class Mage extends Hero {
+//   constructor({ stells, ...restProps } = {}) {
+//     super(restProps);
+
+//     this.stells = stells;
+//   }
+
+//   cast() {
+//     console.log(`${this.name} что-то там кастует 🍎`);
+//   }
+// }
+
+// const mango = new Warrior({ name: "mango", xp: 1000, weapon: "аллебарда" });
+// console.log(mango);
+
+// mango.attack();
+
+// mango.gainXp(1000);
+
+// const poly = new Mage({ name: "poly", xp: 500, stells: ["фаербол"] });
+// console.log(poly);
+// poly.cast();
+// poly.gainXp(2000);
+
+// const data = ["todo-1", "todo-2", "todo-3"];
+
+// let markup = data.map((el) => `<div>${el}</div>`).join("");
+
+// console.log(markup);
+// function hello() {
+//   console.log("Hello", this);
+// }
+
+// const person = {
+//   name: "Dymitr",
+//   age: 43,
+//   sayHelloWindow: hello.bind(document),
+//   logInfo: function (job, phone) {
+//     console.group(`${this.name} info: `);
+//     console.log(`Name is ${this.name}`);
+//     console.log(`Age is ${this.age}`);
+//     console.log(`job is ${job}`);
+//     console.log(`phone is ${phone}`);
+//     console.groupEnd();
+//   },
+// };
+// const lena = {
+//   name: "Elena",
+//   age: 23,
+// };
+
+// // person.logInfo.bind(lena, "Frontend", "8-0999-3344-325")();
+// //person.logInfo.call(lena, "Frontend", "8-0999-3344-325");
+// person.logInfo.apply(lena, ["Frontend", "8-0999-3344-325"]);
+
+// /// ===================
+
+// const array = [1, 2, 3, 4, 5];
+
+// // function mltBy(arr, n) {
+// //   return arr.map(function (i) {
+// //     return i * n;
+// //   });
+// // }
+
+// Array.prototype.multBy = function (n) {
+//   return this.map(function (i) {
+//     return i * n;
+//   });
+// };
+
+// console.log(array.multBy(20));
+
+// const $ = document.querySelector.bind(document);
+// console.log($ === document.querySelector);
+
+// const header = $("h1");
+// console.log(header);
+
+// const bill = {
+//   tip: 0.1,
+//   calc(total) {
+//     console.log(this);
+//     return total + total * this.tip;
+//   },
+//   detail(dish1, dish2, sum) {
+//     return `Ваш обед (${dish1}, ${dish2}) стоит ${this.calc(sum)}`;
+//   },
+// };
+
+// const pay = bill.detail("pizza", "salad", 1000);
+
+// const payCount = bill.detail.call(bill, ...["pizza", "salad", 1000]);
+// const payCount2 = bill.detail.apply(bill, ["pizza", "salad", 1000]);
+
+// console.log(pay);
+// console.log(payCount);
+// console.log(payCount2);
+
+//Пример № 1-------------
+
+// function person() {
+//   let name = "Peter";
+
+//   return function displayName() {
+//     console.log(name);
+//   };
+// }
+
+// let peter = person();
+// peter();
